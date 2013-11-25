@@ -1,0 +1,270 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1654CAB115C2C0D200BA27F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1654CAB015C2C0D200BA27F8 /* UIKit.framework */; };
+		1654CAB315C2C0D200BA27F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1654CAB215C2C0D200BA27F8 /* Foundation.framework */; };
+		1654CAB515C2C0D200BA27F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1654CAB415C2C0D200BA27F8 /* CoreGraphics.framework */; };
+		1654CABB15C2C0D200BA27F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1654CAB915C2C0D200BA27F8 /* InfoPlist.strings */; };
+		1654CABD15C2C0D300BA27F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1654CABC15C2C0D300BA27F8 /* main.m */; };
+		1654CAC115C2C0D300BA27F8 /* HPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1654CAC015C2C0D300BA27F8 /* HPAppDelegate.m */; };
+		1654CAC915C2C18500BA27F8 /* HPHyponosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1654CAC815C2C18500BA27F8 /* HPHyponosisView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1654CAAC15C2C0D200BA27F8 /* Hyponosister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hyponosister.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1654CAB015C2C0D200BA27F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1654CAB215C2C0D200BA27F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1654CAB415C2C0D200BA27F8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1654CAB815C2C0D200BA27F8 /* Hyponosister-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hyponosister-Info.plist"; sourceTree = "<group>"; };
+		1654CABA15C2C0D200BA27F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1654CABC15C2C0D300BA27F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1654CABE15C2C0D300BA27F8 /* Hyponosister-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hyponosister-Prefix.pch"; sourceTree = "<group>"; };
+		1654CABF15C2C0D300BA27F8 /* HPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPAppDelegate.h; sourceTree = "<group>"; };
+		1654CAC015C2C0D300BA27F8 /* HPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPAppDelegate.m; sourceTree = "<group>"; };
+		1654CAC715C2C18500BA27F8 /* HPHyponosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPHyponosisView.h; sourceTree = "<group>"; };
+		1654CAC815C2C18500BA27F8 /* HPHyponosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPHyponosisView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1654CAA915C2C0D200BA27F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1654CAB115C2C0D200BA27F8 /* UIKit.framework in Frameworks */,
+				1654CAB315C2C0D200BA27F8 /* Foundation.framework in Frameworks */,
+				1654CAB515C2C0D200BA27F8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1654CAA115C2C0D200BA27F8 = {
+			isa = PBXGroup;
+			children = (
+				1654CAB615C2C0D200BA27F8 /* Hyponosister */,
+				1654CAAF15C2C0D200BA27F8 /* Frameworks */,
+				1654CAAD15C2C0D200BA27F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1654CAAD15C2C0D200BA27F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1654CAAC15C2C0D200BA27F8 /* Hyponosister.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1654CAAF15C2C0D200BA27F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1654CAB015C2C0D200BA27F8 /* UIKit.framework */,
+				1654CAB215C2C0D200BA27F8 /* Foundation.framework */,
+				1654CAB415C2C0D200BA27F8 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1654CAB615C2C0D200BA27F8 /* Hyponosister */ = {
+			isa = PBXGroup;
+			children = (
+				1654CABF15C2C0D300BA27F8 /* HPAppDelegate.h */,
+				1654CAC015C2C0D300BA27F8 /* HPAppDelegate.m */,
+				1654CAC715C2C18500BA27F8 /* HPHyponosisView.h */,
+				1654CAC815C2C18500BA27F8 /* HPHyponosisView.m */,
+				1654CAB715C2C0D200BA27F8 /* Supporting Files */,
+			);
+			path = Hyponosister;
+			sourceTree = "<group>";
+		};
+		1654CAB715C2C0D200BA27F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1654CAB815C2C0D200BA27F8 /* Hyponosister-Info.plist */,
+				1654CAB915C2C0D200BA27F8 /* InfoPlist.strings */,
+				1654CABC15C2C0D300BA27F8 /* main.m */,
+				1654CABE15C2C0D300BA27F8 /* Hyponosister-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1654CAAB15C2C0D200BA27F8 /* Hyponosister */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1654CAC415C2C0D300BA27F8 /* Build configuration list for PBXNativeTarget "Hyponosister" */;
+			buildPhases = (
+				1654CAA815C2C0D200BA27F8 /* Sources */,
+				1654CAA915C2C0D200BA27F8 /* Frameworks */,
+				1654CAAA15C2C0D200BA27F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hyponosister;
+			productName = Hyponosister;
+			productReference = 1654CAAC15C2C0D200BA27F8 /* Hyponosister.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1654CAA315C2C0D200BA27F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HP;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 1654CAA615C2C0D200BA27F8 /* Build configuration list for PBXProject "Hyponosister" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1654CAA115C2C0D200BA27F8;
+			productRefGroup = 1654CAAD15C2C0D200BA27F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1654CAAB15C2C0D200BA27F8 /* Hyponosister */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1654CAAA15C2C0D200BA27F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1654CABB15C2C0D200BA27F8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1654CAA815C2C0D200BA27F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1654CABD15C2C0D300BA27F8 /* main.m in Sources */,
+				1654CAC115C2C0D300BA27F8 /* HPAppDelegate.m in Sources */,
+				1654CAC915C2C18500BA27F8 /* HPHyponosisView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1654CAB915C2C0D200BA27F8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1654CABA15C2C0D200BA27F8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1654CAC215C2C0D300BA27F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1654CAC315C2C0D300BA27F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1654CAC515C2C0D300BA27F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hyponosister/Hyponosister-Prefix.pch";
+				INFOPLIST_FILE = "Hyponosister/Hyponosister-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1654CAC615C2C0D300BA27F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hyponosister/Hyponosister-Prefix.pch";
+				INFOPLIST_FILE = "Hyponosister/Hyponosister-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1654CAA615C2C0D200BA27F8 /* Build configuration list for PBXProject "Hyponosister" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1654CAC215C2C0D300BA27F8 /* Debug */,
+				1654CAC315C2C0D300BA27F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1654CAC415C2C0D300BA27F8 /* Build configuration list for PBXNativeTarget "Hyponosister" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1654CAC515C2C0D300BA27F8 /* Debug */,
+				1654CAC615C2C0D300BA27F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1654CAA315C2C0D200BA27F8 /* Project object */;
+}
