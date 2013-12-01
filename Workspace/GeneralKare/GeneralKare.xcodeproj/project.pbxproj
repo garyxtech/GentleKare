@@ -22,6 +22,7 @@
 		16F38029184B711800DAD2F5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F3800D184B711800DAD2F5 /* CoreData.framework */; };
 		16F38031184B711800DAD2F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16F3802F184B711800DAD2F5 /* InfoPlist.strings */; };
 		16F38033184B711800DAD2F5 /* GeneralKareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F38032184B711800DAD2F5 /* GeneralKareTests.m */; };
+		16F3803E184B71B600DAD2F5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3803D184B71B600DAD2F5 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		16F3802E184B711800DAD2F5 /* GeneralKareTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeneralKareTests-Info.plist"; sourceTree = "<group>"; };
 		16F38030184B711800DAD2F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		16F38032184B711800DAD2F5 /* GeneralKareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralKareTests.m; sourceTree = "<group>"; };
+		16F3803D184B71B600DAD2F5 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		16F3800F184B711800DAD2F5 /* GeneralKare */ = {
 			isa = PBXGroup;
 			children = (
+				16F3803C184B718900DAD2F5 /* UI */,
 				16F38018184B711800DAD2F5 /* GKAppDelegate.h */,
 				16F38019184B711800DAD2F5 /* GKAppDelegate.m */,
 				16F3801E184B711800DAD2F5 /* Images.xcassets */,
@@ -151,6 +154,14 @@
 				16F3802F184B711800DAD2F5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16F3803C184B718900DAD2F5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				16F3803D184B71B600DAD2F5 /* MainStoryboard.storyboard */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F3803E184B71B600DAD2F5 /* MainStoryboard.storyboard in Resources */,
 				16F38014184B711800DAD2F5 /* InfoPlist.strings in Resources */,
 				16F3801F184B711800DAD2F5 /* Images.xcassets in Resources */,
 			);
@@ -452,6 +464,7 @@
 				16F38038184B711800DAD2F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16F38039184B711800DAD2F5 /* Build configuration list for PBXNativeTarget "GeneralKareTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +473,7 @@
 				16F3803B184B711800DAD2F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
