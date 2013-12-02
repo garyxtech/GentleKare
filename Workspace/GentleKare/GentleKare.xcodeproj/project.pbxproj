@@ -76,6 +76,7 @@
 		16EE0143184CDB8500923E59 /* GKAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAction.m; sourceTree = "<group>"; };
 		16EE0145184CDB8500923E59 /* GKBaby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBaby.h; sourceTree = "<group>"; };
 		16EE0146184CDB8500923E59 /* GKBaby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBaby.m; sourceTree = "<group>"; };
+		16EE0148184CE75000923E59 /* GKActionConfirmDelete.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKActionConfirmDelete.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +198,7 @@
 				1663278B184CC71000048D7E /* GKOverallViewController.m */,
 				16EE013C184CDA1C00923E59 /* GKActionEndViewController.h */,
 				16EE013D184CDA1C00923E59 /* GKActionEndViewController.m */,
+				16EE0148184CE75000923E59 /* GKActionConfirmDelete.h */,
 			);
 			name = UI;
 			sourceTree = "<group>";

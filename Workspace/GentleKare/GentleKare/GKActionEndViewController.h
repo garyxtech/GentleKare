@@ -7,13 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GKActionConfirmDelete.h"
+
+@class GKActionConfirmDelete;
 
 @interface GKActionEndViewController : UIViewController
 {
     IBOutlet UILabel *_lblCurrentState;
     IBOutlet UILabel *_lblActionDescrition;
     IBOutlet UIDatePicker *_pkrStartTime;
+    
+    GK_E_Action _action;
 }
+
+@property (nonatomic, weak) id <GKActionConfirmDelete> confirmDelegate;
 
 -(void) resetData;
 

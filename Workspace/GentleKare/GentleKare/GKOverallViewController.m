@@ -28,15 +28,19 @@
     
     _actionStartController = [self.storyboard instantiateViewControllerWithIdentifier:@"VC_ACTION_START"];
     UIView *view = _actionStartController.view;
+    _actionStartController.confirmDelegate = self;
     NSLog(@"%@", view);
     
     _actionEndController = [self.storyboard instantiateViewControllerWithIdentifier:@"VC_ACTION_END"];
     view = _actionEndController.view;
+    _actionEndController.confirmDelegate = self;
     NSLog(@"%@", view);
     
     view = nil;
     
     [self loadBabyData];
+    
+    [self updateOverviewInfo];
 }
 
 -(void) loadBabyData{
@@ -56,6 +60,42 @@
     }else{
         [_actionStartController loadAction:GK_E_Action_FEED];
         [self presentViewController:_actionStartController animated:true completion:nil];
+    }
+}
+
+-(void)didConfirmWithDate:(NSDate *)date forAction:(GK_E_Action)action isForBegin:(bool)isStart{
+    if(isStart){
+        [GKBabySitter action:action at:date];
+    }else{
+        [GKBabySitter finishAt:date];
+    }
+    [self updateOverviewInfo];
+}
+
+-(void) updateOverviewInfo{
+    [_lblCurrentAction setText:[[GKBabySitter getCurrBabyActionDescription] stringByAppendingString:@"中"]];
+    [self updateActionAvailability];
+}
+
+-(void) updateActionAvailability{
+    GK_E_Action action = [GKBabySitter getCurrBabyAction];
+    _btnFeed.enabled = _btnSleep.enabled = _btnPlay.enabled = _btnExtract.enabled = false;
+    if(action == GK_E_Action_IDLE){
+        _btnFeed.enabled = _btnSleep.enabled = _btnPlay.enabled = _btnExtract.enabled = true;
+    }else{
+        switch (action) {
+            case GK_E_Action_FEED:
+                _btnFeed.enabled = true;
+                break;
+            case GK_E_Action_PLAY:
+                _btnPlay.enabled = true;
+                break;
+            case GK_E_Action_SLEEP:
+                _btnSleep.enabled = true;
+                break;
+            default:
+                break;
+        }
     }
 }
 

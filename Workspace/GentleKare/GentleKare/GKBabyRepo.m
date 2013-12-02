@@ -85,4 +85,13 @@ static GKBabyRepo *_instance;
     [_context save:&error];
 }
 
++(GKAction *)createNewAction{
+    GKAction *action = [[self inst] _newAction];
+    return action;
+}
+
+-(GKAction *)_newAction{
+    return [NSEntityDescription insertNewObjectForEntityForName:@"GKAction" inManagedObjectContext:_context];
+}
+
 @end

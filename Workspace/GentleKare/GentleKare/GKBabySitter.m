@@ -40,16 +40,31 @@ static GKBabySitter *instance;
 }
 
 -(void) updateCurrAction{
-    GKAction* lastAction = [[[_baby recentActions] allObjects] firstObject];
-    if(lastAction){
-        if(lastAction.endTime){
-            _baby.currAction = GK_E_Action_IDLE;
-        }else{
-            _baby.currAction = [lastAction actionType];
+    
+    GK_E_Action foundActionType = GK_E_Action_IDLE;
+    
+    for(GKAction* currAction in [[[_baby recentActions] allObjects] reverseObjectEnumerator]){
+        if([currAction.actionType intValue] == GK_E_Action_DISPOSE){
+            continue;
         }
-    }else{
-        _baby.currAction = GK_E_Action_IDLE;
+        if(currAction.endTime){
+            continue;
+        }
+        foundActionType = (GK_E_Action) [currAction.actionType intValue];
+        break;
     }
+    
+    _baby.currAction = [NSNumber numberWithInt:foundActionType];
+}
+
+-(GKAction *) _getLastUnfinishedAction{
+    for(GKAction* currAction in [[[_baby recentActions] allObjects] reverseObjectEnumerator]){
+        if(currAction.endTime){
+            continue;
+        }
+        return currAction;
+    }
+    return nil;
 }
 
 -(GKBaby*) _currBaby{
@@ -62,18 +77,31 @@ static GKBabySitter *instance;
 
 +(void)action:(GK_E_Action)action at:(NSDate *)startTime{
     [GKBabySitter baby].currAction = [NSNumber numberWithInt:action];
+    GKAction *newAction = [GKBabyRepo createNewAction];
+    newAction.actionType = [NSNumber numberWithInt:action];
+    newAction.startTime = startTime;
+    newAction.baby = [GKBabySitter baby];
+    if(action == GK_E_Action_DISPOSE){
+        [self finishAt:startTime];
+    }
+    [[self inst] updateCurrAction];
+    [[self inst] save];
 }
 
 +(void)finishAt:(NSDate *)endTime{
-    [GKBabySitter baby].currAction = [NSNumber numberWithInt:GK_E_Action_IDLE];
+    GKAction *lastAction = [[GKBabySitter inst] _getLastUnfinishedAction];
+    lastAction.endTime = endTime;
+    [[self inst] updateCurrAction];
+    [[self inst] save];
 }
 
 +(GK_E_Action)getCurrBabyAction{
-    return (GK_E_Action)[GKBabySitter baby].currAction;
+    return [[GKBabySitter baby].currAction intValue];
 }
 
 +(NSString *)getCurrBabyActionDescription{
-    return [GKBabySitter getActionDescription:(GK_E_Action)[GKBabySitter baby].currAction];
+    GK_E_Action action = [[GKBabySitter baby].currAction intValue];
+    return [GKBabySitter getActionDescription:action];
 }
 
 +(NSString *)getActionDescription:(GK_E_Action)action{

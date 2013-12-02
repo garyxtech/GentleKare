@@ -7,12 +7,15 @@
 //
 
 #import "GKActionStartViewController.h"
+#import "GKActionConfirmDelete.h"
 
 @interface GKActionStartViewController ()
 
 @end
 
 @implementation GKActionStartViewController
+
+@synthesize confirmDelegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,7 +37,10 @@
 }
 
 -(void)onTriggerConfirm:(id)sender{
-    [self dismissSelf:nil];
+    [self dismissSelf:^{
+        NSDate *date = [_pkrStartTime date];
+        [confirmDelegate didConfirmWithDate:date forAction:_action isForBegin:true];
+    }];
 }
 
 -(void)dismissSelf:(void (^)(void))completion {

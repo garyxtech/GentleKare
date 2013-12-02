@@ -9,9 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "GKActionStartViewController.h"
 #import "GKActionEndViewController.h"
+#import "GKActionConfirmDelete.h"
 
-@interface GKOverallViewController : UIViewController{
+@interface GKOverallViewController : UIViewController<GKActionConfirmDelete>{
+    
+    IBOutlet UILabel *_lblCurrentAction;
     IBOutlet UILabel *_lblBabyName;
+    
+    IBOutlet UIButton *_btnFeed;
+    IBOutlet UIButton *_btnSleep;
+    IBOutlet UIButton *_btnPlay;
+    IBOutlet UIButton *_btnDispose;
+    IBOutlet UIButton *_btnExtract;
     
     GKActionStartViewController *_actionStartController;
     GKActionEndViewController *_actionEndController;

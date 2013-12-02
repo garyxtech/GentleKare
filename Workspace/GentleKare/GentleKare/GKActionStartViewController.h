@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GKActionConfirmDelete.h"
 
 @interface GKActionStartViewController : UIViewController
 {
@@ -15,7 +16,10 @@
     IBOutlet UIDatePicker *_pkrStartTime;
     
     GK_E_Action _action;
+    
 }
+
+@property (nonatomic, weak) id <GKActionConfirmDelete> confirmDelegate;
 
 -(void) loadAction: (GK_E_Action) action;
 

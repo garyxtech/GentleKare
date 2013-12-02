@@ -14,6 +14,8 @@
 
 @implementation GKActionEndViewController
 
+@synthesize confirmDelegate;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -24,6 +26,7 @@
 }
 
 -(void) resetData{
+    _action = [GKBabySitter getCurrBabyAction];
     [_lblCurrentState setText:[[GKBabySitter getCurrBabyActionDescription] stringByAppendingString:@"中"]];
     [_lblActionDescrition setText:[GKBabySitter getCurrBabyActionDescription]];
 }
@@ -33,7 +36,10 @@
 }
 
 -(void)onTriggerConfirm:(id)sender{
-    [self dismissSelf:nil];
+    [self dismissSelf:^{
+        NSDate *date = [_pkrStartTime date];
+        [confirmDelegate didConfirmWithDate:date forAction:_action isForBegin:false];
+    }];
 }
 
 -(void)dismissSelf:(void (^)(void))completion {

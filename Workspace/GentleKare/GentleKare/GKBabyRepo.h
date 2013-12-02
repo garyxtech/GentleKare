@@ -21,4 +21,6 @@
 
 +(void) save;
 
++(GKAction*) createNewAction;
+
 @end
