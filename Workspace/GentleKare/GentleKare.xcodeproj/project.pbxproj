@@ -19,6 +19,13 @@
 		1663276C184CC55A00048D7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632754184CC55900048D7E /* UIKit.framework */; };
 		16632774184CC55A00048D7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16632772184CC55A00048D7E /* InfoPlist.strings */; };
 		16632776184CC55A00048D7E /* GentleKareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16632775184CC55A00048D7E /* GentleKareTests.m */; };
+		16632786184CC6F300048D7E /* GKAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 16632783184CC6F300048D7E /* GKAction.m */; };
+		16632787184CC6F300048D7E /* GKBaby.m in Sources */ = {isa = PBXBuildFile; fileRef = 16632785184CC6F300048D7E /* GKBaby.m */; };
+		1663278C184CC71000048D7E /* GKActionStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16632789184CC71000048D7E /* GKActionStartViewController.m */; };
+		1663278D184CC71000048D7E /* GKOverallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1663278B184CC71000048D7E /* GKOverallViewController.m */; };
+		16632791184CC72700048D7E /* GKBabySitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 16632790184CC72700048D7E /* GKBabySitter.m */; };
+		16632793184CC7A300048D7E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632792184CC7A300048D7E /* CoreData.framework */; };
+		16632795184CC7D600048D7E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16632794184CC7D600048D7E /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,19 @@
 		16632771184CC55A00048D7E /* GentleKareTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GentleKareTests-Info.plist"; sourceTree = "<group>"; };
 		16632773184CC55A00048D7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		16632775184CC55A00048D7E /* GentleKareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GentleKareTests.m; sourceTree = "<group>"; };
+		16632782184CC6F300048D7E /* GKAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAction.h; sourceTree = "<group>"; };
+		16632783184CC6F300048D7E /* GKAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAction.m; sourceTree = "<group>"; };
+		16632784184CC6F300048D7E /* GKBaby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBaby.h; sourceTree = "<group>"; };
+		16632785184CC6F300048D7E /* GKBaby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBaby.m; sourceTree = "<group>"; };
+		16632788184CC71000048D7E /* GKActionStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKActionStartViewController.h; sourceTree = "<group>"; };
+		16632789184CC71000048D7E /* GKActionStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKActionStartViewController.m; sourceTree = "<group>"; };
+		1663278A184CC71000048D7E /* GKOverallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKOverallViewController.h; sourceTree = "<group>"; };
+		1663278B184CC71000048D7E /* GKOverallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKOverallViewController.m; sourceTree = "<group>"; };
+		1663278E184CC71900048D7E /* GKType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKType.h; sourceTree = "<group>"; };
+		1663278F184CC72700048D7E /* GKBabySitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBabySitter.h; sourceTree = "<group>"; };
+		16632790184CC72700048D7E /* GKBabySitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBabySitter.m; sourceTree = "<group>"; };
+		16632792184CC7A300048D7E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		16632794184CC7D600048D7E /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16632793184CC7A300048D7E /* CoreData.framework in Frameworks */,
 				16632753184CC55900048D7E /* CoreGraphics.framework in Frameworks */,
 				16632755184CC55900048D7E /* UIKit.framework in Frameworks */,
 				16632751184CC55900048D7E /* Foundation.framework in Frameworks */,
@@ -96,6 +117,7 @@
 		1663274F184CC55900048D7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				16632792184CC7A300048D7E /* CoreData.framework */,
 				16632750184CC55900048D7E /* Foundation.framework */,
 				16632752184CC55900048D7E /* CoreGraphics.framework */,
 				16632754184CC55900048D7E /* UIKit.framework */,
@@ -107,6 +129,9 @@
 		16632756184CC55A00048D7E /* GentleKare */ = {
 			isa = PBXGroup;
 			children = (
+				16632781184CC6D700048D7E /* Model */,
+				16632780184CC6D000048D7E /* UI */,
+				1663277F184CC5EF00048D7E /* Service */,
 				1663275F184CC55A00048D7E /* GKAppDelegate.h */,
 				16632760184CC55A00048D7E /* GKAppDelegate.m */,
 				16632762184CC55A00048D7E /* Images.xcassets */,
@@ -142,6 +167,39 @@
 				16632772184CC55A00048D7E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1663277F184CC5EF00048D7E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1663278F184CC72700048D7E /* GKBabySitter.h */,
+				16632790184CC72700048D7E /* GKBabySitter.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		16632780184CC6D000048D7E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				16632794184CC7D600048D7E /* MainStoryboard.storyboard */,
+				16632788184CC71000048D7E /* GKActionStartViewController.h */,
+				16632789184CC71000048D7E /* GKActionStartViewController.m */,
+				1663278A184CC71000048D7E /* GKOverallViewController.h */,
+				1663278B184CC71000048D7E /* GKOverallViewController.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		16632781184CC6D700048D7E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1663278E184CC71900048D7E /* GKType.h */,
+				16632782184CC6F300048D7E /* GKAction.h */,
+				16632783184CC6F300048D7E /* GKAction.m */,
+				16632784184CC6F300048D7E /* GKBaby.h */,
+				16632785184CC6F300048D7E /* GKBaby.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +250,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "薛洪";
 				TargetAttributes = {
+					1663274C184CC55900048D7E = {
+						DevelopmentTeam = NHLC67DQS9;
+					};
 					16632767184CC55A00048D7E = {
 						TestTargetID = 1663274C184CC55900048D7E;
 					};
@@ -220,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16632795184CC7D600048D7E /* MainStoryboard.storyboard in Resources */,
 				1663275B184CC55A00048D7E /* InfoPlist.strings in Resources */,
 				16632763184CC55A00048D7E /* Images.xcassets in Resources */,
 			);
@@ -240,8 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1663278D184CC71000048D7E /* GKOverallViewController.m in Sources */,
 				16632761184CC55A00048D7E /* GKAppDelegate.m in Sources */,
+				1663278C184CC71000048D7E /* GKActionStartViewController.m in Sources */,
+				16632786184CC6F300048D7E /* GKAction.m in Sources */,
 				1663275D184CC55A00048D7E /* main.m in Sources */,
+				16632787184CC6F300048D7E /* GKBaby.m in Sources */,
+				16632791184CC72700048D7E /* GKBabySitter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,10 +427,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GentleKare/GentleKare-Prefix.pch";
 				INFOPLIST_FILE = "GentleKare/GentleKare-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D850FCA4-B228-4D54-9BE6-B833587A3351";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -373,10 +444,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GentleKare/GentleKare-Prefix.pch";
 				INFOPLIST_FILE = "GentleKare/GentleKare-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D850FCA4-B228-4D54-9BE6-B833587A3351";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -442,6 +517,7 @@
 				1663277B184CC55A00048D7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1663277C184CC55A00048D7E /* Build configuration list for PBXNativeTarget "GentleKareTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +526,7 @@
 				1663277E184CC55A00048D7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
