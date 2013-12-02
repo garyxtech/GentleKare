@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16632751184CC55900048D7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632750184CC55900048D7E /* Foundation.framework */; };
+		16632753184CC55900048D7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632752184CC55900048D7E /* CoreGraphics.framework */; };
+		16632755184CC55900048D7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632754184CC55900048D7E /* UIKit.framework */; };
+		1663275B184CC55A00048D7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16632759184CC55A00048D7E /* InfoPlist.strings */; };
+		1663275D184CC55A00048D7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1663275C184CC55A00048D7E /* main.m */; };
+		16632761184CC55A00048D7E /* GKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16632760184CC55A00048D7E /* GKAppDelegate.m */; };
+		16632763184CC55A00048D7E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16632762184CC55A00048D7E /* Images.xcassets */; };
+		1663276A184CC55A00048D7E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632769184CC55A00048D7E /* XCTest.framework */; };
+		1663276B184CC55A00048D7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632750184CC55900048D7E /* Foundation.framework */; };
+		1663276C184CC55A00048D7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632754184CC55900048D7E /* UIKit.framework */; };
+		16632774184CC55A00048D7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16632772184CC55A00048D7E /* InfoPlist.strings */; };
+		16632776184CC55A00048D7E /* GentleKareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16632775184CC55A00048D7E /* GentleKareTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1663276D184CC55A00048D7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16632745184CC55900048D7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1663274C184CC55900048D7E;
+			remoteInfo = GentleKare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1663274D184CC55900048D7E /* GentleKare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GentleKare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16632750184CC55900048D7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		16632752184CC55900048D7E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		16632754184CC55900048D7E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		16632758184CC55A00048D7E /* GentleKare-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GentleKare-Info.plist"; sourceTree = "<group>"; };
+		1663275A184CC55A00048D7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1663275C184CC55A00048D7E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1663275E184CC55A00048D7E /* GentleKare-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GentleKare-Prefix.pch"; sourceTree = "<group>"; };
+		1663275F184CC55A00048D7E /* GKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKAppDelegate.h; sourceTree = "<group>"; };
+		16632760184CC55A00048D7E /* GKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKAppDelegate.m; sourceTree = "<group>"; };
+		16632762184CC55A00048D7E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		16632768184CC55A00048D7E /* GentleKareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GentleKareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16632769184CC55A00048D7E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		16632771184CC55A00048D7E /* GentleKareTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GentleKareTests-Info.plist"; sourceTree = "<group>"; };
+		16632773184CC55A00048D7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		16632775184CC55A00048D7E /* GentleKareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GentleKareTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1663274A184CC55900048D7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16632753184CC55900048D7E /* CoreGraphics.framework in Frameworks */,
+				16632755184CC55900048D7E /* UIKit.framework in Frameworks */,
+				16632751184CC55900048D7E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16632765184CC55A00048D7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1663276A184CC55A00048D7E /* XCTest.framework in Frameworks */,
+				1663276C184CC55A00048D7E /* UIKit.framework in Frameworks */,
+				1663276B184CC55A00048D7E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16632744184CC55900048D7E = {
+			isa = PBXGroup;
+			children = (
+				16632756184CC55A00048D7E /* GentleKare */,
+				1663276F184CC55A00048D7E /* GentleKareTests */,
+				1663274F184CC55900048D7E /* Frameworks */,
+				1663274E184CC55900048D7E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1663274E184CC55900048D7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1663274D184CC55900048D7E /* GentleKare.app */,
+				16632768184CC55A00048D7E /* GentleKareTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1663274F184CC55900048D7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16632750184CC55900048D7E /* Foundation.framework */,
+				16632752184CC55900048D7E /* CoreGraphics.framework */,
+				16632754184CC55900048D7E /* UIKit.framework */,
+				16632769184CC55A00048D7E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		16632756184CC55A00048D7E /* GentleKare */ = {
+			isa = PBXGroup;
+			children = (
+				1663275F184CC55A00048D7E /* GKAppDelegate.h */,
+				16632760184CC55A00048D7E /* GKAppDelegate.m */,
+				16632762184CC55A00048D7E /* Images.xcassets */,
+				16632757184CC55A00048D7E /* Supporting Files */,
+			);
+			path = GentleKare;
+			sourceTree = "<group>";
+		};
+		16632757184CC55A00048D7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				16632758184CC55A00048D7E /* GentleKare-Info.plist */,
+				16632759184CC55A00048D7E /* InfoPlist.strings */,
+				1663275C184CC55A00048D7E /* main.m */,
+				1663275E184CC55A00048D7E /* GentleKare-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1663276F184CC55A00048D7E /* GentleKareTests */ = {
+			isa = PBXGroup;
+			children = (
+				16632775184CC55A00048D7E /* GentleKareTests.m */,
+				16632770184CC55A00048D7E /* Supporting Files */,
+			);
+			path = GentleKareTests;
+			sourceTree = "<group>";
+		};
+		16632770184CC55A00048D7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				16632771184CC55A00048D7E /* GentleKareTests-Info.plist */,
+				16632772184CC55A00048D7E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1663274C184CC55900048D7E /* GentleKare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16632779184CC55A00048D7E /* Build configuration list for PBXNativeTarget "GentleKare" */;
+			buildPhases = (
+				16632749184CC55900048D7E /* Sources */,
+				1663274A184CC55900048D7E /* Frameworks */,
+				1663274B184CC55900048D7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GentleKare;
+			productName = GentleKare;
+			productReference = 1663274D184CC55900048D7E /* GentleKare.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16632767184CC55A00048D7E /* GentleKareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1663277C184CC55A00048D7E /* Build configuration list for PBXNativeTarget "GentleKareTests" */;
+			buildPhases = (
+				16632764184CC55A00048D7E /* Sources */,
+				16632765184CC55A00048D7E /* Frameworks */,
+				16632766184CC55A00048D7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1663276E184CC55A00048D7E /* PBXTargetDependency */,
+			);
+			name = GentleKareTests;
+			productName = GentleKareTests;
+			productReference = 16632768184CC55A00048D7E /* GentleKareTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16632745184CC55900048D7E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GK;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "薛洪";
+				TargetAttributes = {
+					16632767184CC55A00048D7E = {
+						TestTargetID = 1663274C184CC55900048D7E;
+					};
+				};
+			};
+			buildConfigurationList = 16632748184CC55900048D7E /* Build configuration list for PBXProject "GentleKare" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 16632744184CC55900048D7E;
+			productRefGroup = 1663274E184CC55900048D7E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1663274C184CC55900048D7E /* GentleKare */,
+				16632767184CC55A00048D7E /* GentleKareTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1663274B184CC55900048D7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1663275B184CC55A00048D7E /* InfoPlist.strings in Resources */,
+				16632763184CC55A00048D7E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16632766184CC55A00048D7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16632774184CC55A00048D7E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16632749184CC55900048D7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16632761184CC55A00048D7E /* GKAppDelegate.m in Sources */,
+				1663275D184CC55A00048D7E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16632764184CC55A00048D7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16632776184CC55A00048D7E /* GentleKareTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1663276E184CC55A00048D7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1663274C184CC55900048D7E /* GentleKare */;
+			targetProxy = 1663276D184CC55A00048D7E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		16632759184CC55A00048D7E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1663275A184CC55A00048D7E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		16632772184CC55A00048D7E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16632773184CC55A00048D7E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16632777184CC55A00048D7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		16632778184CC55A00048D7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1663277A184CC55A00048D7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GentleKare/GentleKare-Prefix.pch";
+				INFOPLIST_FILE = "GentleKare/GentleKare-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1663277B184CC55A00048D7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GentleKare/GentleKare-Prefix.pch";
+				INFOPLIST_FILE = "GentleKare/GentleKare-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1663277D184CC55A00048D7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GentleKare.app/GentleKare";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GentleKare/GentleKare-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GentleKareTests/GentleKareTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1663277E184CC55A00048D7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GentleKare.app/GentleKare";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GentleKare/GentleKare-Prefix.pch";
+				INFOPLIST_FILE = "GentleKareTests/GentleKareTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16632748184CC55900048D7E /* Build configuration list for PBXProject "GentleKare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16632777184CC55A00048D7E /* Debug */,
+				16632778184CC55A00048D7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16632779184CC55A00048D7E /* Build configuration list for PBXNativeTarget "GentleKare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1663277A184CC55A00048D7E /* Debug */,
+				1663277B184CC55A00048D7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1663277C184CC55A00048D7E /* Build configuration list for PBXNativeTarget "GentleKareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1663277D184CC55A00048D7E /* Debug */,
+				1663277E184CC55A00048D7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16632745184CC55900048D7E /* Project object */;
+}
