@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16438500184B8003002D345F /* GKOverallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 164384FF184B8003002D345F /* GKOverallViewController.m */; };
+		16438503184B8485002D345F /* GKActionStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16438502184B8485002D345F /* GKActionStartViewController.m */; };
+		165CBBD1184B895E0019DAF2 /* GKBabySitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 165CBBD0184B895E0019DAF2 /* GKBabySitter.m */; };
+		165CBBE0184B8F290019DAF2 /* GKAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 165CBBDF184B8F290019DAF2 /* GKAction.m */; };
+		165CBBE3184B8F2A0019DAF2 /* GKBaby.m in Sources */ = {isa = PBXBuildFile; fileRef = 165CBBE2184B8F2A0019DAF2 /* GKBaby.m */; };
 		16F38008184B711800DAD2F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F38007184B711800DAD2F5 /* Foundation.framework */; };
 		16F3800A184B711800DAD2F5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F38009184B711800DAD2F5 /* CoreGraphics.framework */; };
 		16F3800C184B711800DAD2F5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F3800B184B711800DAD2F5 /* UIKit.framework */; };
@@ -36,6 +41,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		164384FE184B8003002D345F /* GKOverallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKOverallViewController.h; sourceTree = "<group>"; };
+		164384FF184B8003002D345F /* GKOverallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKOverallViewController.m; sourceTree = "<group>"; };
+		16438501184B8485002D345F /* GKActionStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKActionStartViewController.h; sourceTree = "<group>"; };
+		16438502184B8485002D345F /* GKActionStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKActionStartViewController.m; sourceTree = "<group>"; };
+		16438505184B8555002D345F /* GKType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKType.h; sourceTree = "<group>"; };
+		165CBBCF184B895E0019DAF2 /* GKBabySitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBabySitter.h; sourceTree = "<group>"; };
+		165CBBD0184B895E0019DAF2 /* GKBabySitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBabySitter.m; sourceTree = "<group>"; };
+		165CBBDE184B8F290019DAF2 /* GKAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAction.h; sourceTree = "<group>"; };
+		165CBBDF184B8F290019DAF2 /* GKAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAction.m; sourceTree = "<group>"; };
+		165CBBE1184B8F2A0019DAF2 /* GKBaby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBaby.h; sourceTree = "<group>"; };
+		165CBBE2184B8F2A0019DAF2 /* GKBaby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBaby.m; sourceTree = "<group>"; };
 		16F38004184B711800DAD2F5 /* GeneralKare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeneralKare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F38007184B711800DAD2F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		16F38009184B711800DAD2F5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +99,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16438504184B8514002D345F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				16F3801B184B711800DAD2F5 /* GeneralKare.xcdatamodeld */,
+				165CBBE1184B8F2A0019DAF2 /* GKBaby.h */,
+				165CBBE2184B8F2A0019DAF2 /* GKBaby.m */,
+				165CBBDE184B8F290019DAF2 /* GKAction.h */,
+				165CBBDF184B8F290019DAF2 /* GKAction.m */,
+				16438505184B8555002D345F /* GKType.h */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		165CBBCE184B894F0019DAF2 /* Serivce */ = {
+			isa = PBXGroup;
+			children = (
+				165CBBCF184B895E0019DAF2 /* GKBabySitter.h */,
+				165CBBD0184B895E0019DAF2 /* GKBabySitter.m */,
+			);
+			name = Serivce;
+			sourceTree = "<group>";
+		};
 		16F37FFB184B711800DAD2F5 = {
 			isa = PBXGroup;
 			children = (
@@ -117,11 +155,12 @@
 		16F3800F184B711800DAD2F5 /* GeneralKare */ = {
 			isa = PBXGroup;
 			children = (
+				165CBBCE184B894F0019DAF2 /* Serivce */,
+				16438504184B8514002D345F /* Model */,
 				16F3803C184B718900DAD2F5 /* UI */,
 				16F38018184B711800DAD2F5 /* GKAppDelegate.h */,
 				16F38019184B711800DAD2F5 /* GKAppDelegate.m */,
 				16F3801E184B711800DAD2F5 /* Images.xcassets */,
-				16F3801B184B711800DAD2F5 /* GeneralKare.xcdatamodeld */,
 				16F38010184B711800DAD2F5 /* Supporting Files */,
 			);
 			path = GeneralKare;
@@ -160,6 +199,10 @@
 			isa = PBXGroup;
 			children = (
 				16F3803D184B71B600DAD2F5 /* MainStoryboard.storyboard */,
+				164384FE184B8003002D345F /* GKOverallViewController.h */,
+				164384FF184B8003002D345F /* GKOverallViewController.m */,
+				16438501184B8485002D345F /* GKActionStartViewController.h */,
+				16438502184B8485002D345F /* GKActionStartViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -212,6 +255,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "薛洪";
 				TargetAttributes = {
+					16F38003184B711800DAD2F5 = {
+						DevelopmentTeam = NHLC67DQS9;
+					};
 					16F38023184B711800DAD2F5 = {
 						TestTargetID = 16F38003184B711800DAD2F5;
 					};
@@ -262,7 +308,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				16F3801A184B711800DAD2F5 /* GKAppDelegate.m in Sources */,
+				16438503184B8485002D345F /* GKActionStartViewController.m in Sources */,
 				16F3801D184B711800DAD2F5 /* GeneralKare.xcdatamodeld in Sources */,
+				165CBBE3184B8F2A0019DAF2 /* GKBaby.m in Sources */,
+				16438500184B8003002D345F /* GKOverallViewController.m in Sources */,
+				165CBBE0184B8F290019DAF2 /* GKAction.m in Sources */,
+				165CBBD1184B895E0019DAF2 /* GKBabySitter.m in Sources */,
 				16F38016184B711800DAD2F5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,10 +433,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hong Xue (TSJN8XXTN9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GeneralKare/GeneralKare-Prefix.pch";
 				INFOPLIST_FILE = "GeneralKare/GeneralKare-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "212DF6C0-3324-4806-ACD9-532A9E7D7CF2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -395,10 +451,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hong Xue (NHLC67DQS9)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GeneralKare/GeneralKare-Prefix.pch";
 				INFOPLIST_FILE = "GeneralKare/GeneralKare-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B28EB6EB-64B3-484A-B806-412B20A6C2BD";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
