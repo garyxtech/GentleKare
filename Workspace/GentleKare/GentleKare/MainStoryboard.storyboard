@@ -34,9 +34,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="RkZ-Vb-fpz" kind="relationship" relationship="viewControllers" id="puI-F9-TSN"/>
                         <segue destination="Bdx-m5-Ywt" kind="relationship" relationship="viewControllers" id="4xn-ru-KdF"/>
                         <segue destination="dOR-c3-BfM" kind="relationship" relationship="viewControllers" id="ca1-pb-wM1"/>
-                        <segue destination="RkZ-Vb-fpz" kind="relationship" relationship="viewControllers" id="puI-F9-TSN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVv-ZT-Mxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -75,7 +75,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onTriggerFeeding:" destination="4Pd-BW-ngB" eventType="touchUpInside" id="S9T-UQ-ojx"/>
+                                    <action selector="onTriggerFeeding:" destination="RkZ-Vb-fpz" eventType="touchUpInside" id="MMh-Tf-hO3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7a-zH-oTE">
@@ -112,18 +112,17 @@
                     <tabBarItem key="tabBarItem" title="Item" id="K2J-Ce-ZRe"/>
                     <navigationItem key="navigationItem" id="nMj-8Y-Bwf"/>
                     <connections>
-                        <segue destination="75U-bZ-Pio" kind="modal" identifier="SG_ACTION_START" modalTransitionStyle="partialCurl" id="e0G-XE-Ypo"/>
-                        <segue destination="vdr-Ze-eZI" kind="push" id="jkP-c4-fbT"/>
+                        <outlet property="_lblBabyName" destination="2qN-wc-ll7" id="s32-nJ-YRx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Pd-BW-ngB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-87" y="-819"/>
         </scene>
-        <!--动作开始输入界面-->
+        <!--动作开始-->
         <scene sceneID="kAg-us-15a">
             <objects>
-                <viewController storyboardIdentifier="VC_ACTION_START" title="开始时间" id="75U-bZ-Pio" userLabel="动作开始输入界面" customClass="GKActionStartViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VC_ACTION_START" title="开始时间" id="75U-bZ-Pio" userLabel="动作开始" customClass="GKActionStartViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0nB-GF-0dz"/>
                         <viewControllerLayoutGuide type="bottom" id="CoS-eJ-m1g"/>
@@ -220,10 +219,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="411" y="-1476"/>
         </scene>
-        <!--View Controller - 结束时间-->
+        <!--动作结束-->
         <scene sceneID="6gi-TO-jRx">
             <objects>
-                <viewController title="结束时间" id="vdr-Ze-eZI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VC_ACTION_END" title="结束时间" id="vdr-Ze-eZI" userLabel="动作结束" customClass="GKActionEndViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2FO-0a-snh"/>
                         <viewControllerLayoutGuide type="bottom" id="gyW-ll-I87"/>
@@ -285,6 +284,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <state key="normal" title="确认开始时间">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onTriggerConfirm:" destination="vdr-Ze-eZI" eventType="touchUpInside" id="aZB-pi-ZYE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qm2-0Y-yY1">
                                 <rect key="frame" x="145" y="416" width="30" height="30"/>
@@ -293,6 +295,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onTriggerCancel:" destination="vdr-Ze-eZI" eventType="touchUpInside" id="0F0-tM-LaE"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="宝宝当前在：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftZ-PZ-i5n">
                                 <rect key="frame" x="20" y="71" width="102" height="21"/>
@@ -304,6 +309,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="5um-zd-Yi5"/>
+                    <connections>
+                        <outlet property="_lblActionDescrition" destination="EYG-v2-bwx" id="3d2-pG-9hV"/>
+                        <outlet property="_lblCurrentState" destination="kpI-ED-zYr" id="yWp-bB-Nc4"/>
+                        <outlet property="_pkrStartTime" destination="Ohd-O9-6AE" id="zDL-TJ-YKs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAX-na-lZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

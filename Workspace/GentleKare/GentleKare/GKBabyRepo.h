@@ -19,4 +19,6 @@
 
 +(GKBaby*) findOrCreateBabyForName:(NSString*) name;
 
++(void) save;
+
 @end

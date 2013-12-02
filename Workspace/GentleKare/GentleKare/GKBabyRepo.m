@@ -76,4 +76,13 @@ static GKBabyRepo *_instance;
     return baby;
 }
 
++(void)save{
+    [[GKBabyRepo inst] _save];
+}
+
+-(void) _save{
+    NSError *error;
+    [_context save:&error];
+}
+
 @end

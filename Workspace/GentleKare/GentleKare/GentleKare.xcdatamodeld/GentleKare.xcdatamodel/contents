@@ -10,7 +10,7 @@
         <attribute name="currAction" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="gender" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="recentActions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GKAction" inverseName="baby" inverseEntity="GKAction" syncable="YES"/>
+        <relationship name="recentActions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="GKAction" inverseName="baby" inverseEntity="GKAction" syncable="YES"/>
     </entity>
     <fetchRequest name="FindBabyByName" entity="GKBaby" predicateString="name == &quot;$NAME&quot;"/>
     <fetchRequest name="FindFirstBaby" entity="GKBaby"/>

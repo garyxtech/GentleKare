@@ -31,27 +31,49 @@ static GKBabySitter *instance;
 
 -(void) initData{
     _baby = [GKBabyRepo findOrCreateBabyForName:@"川川"];
-    _baby.currAction = [NSNumber numberWithInt:GK_E_Action_IDLE];
+    [self updateCurrAction];
+    [self save];
 }
 
--(GKBaby*) baby{
+-(void) save{
+    [GKBabyRepo save];
+}
+
+-(void) updateCurrAction{
+    GKAction* lastAction = [[[_baby recentActions] allObjects] firstObject];
+    if(lastAction){
+        if(lastAction.endTime){
+            _baby.currAction = GK_E_Action_IDLE;
+        }else{
+            _baby.currAction = [lastAction actionType];
+        }
+    }else{
+        _baby.currAction = GK_E_Action_IDLE;
+    }
+}
+
+-(GKBaby*) _currBaby{
     return _baby;
 }
 
++(GKBaby*) baby{
+    return [[GKBabySitter inst] _currBaby];
+}
+
 +(void)action:(GK_E_Action)action at:(NSDate *)startTime{
-    [[GKBabySitter inst] baby].currAction = [NSNumber numberWithInt:action];
+    [GKBabySitter baby].currAction = [NSNumber numberWithInt:action];
 }
 
 +(void)finishAt:(NSDate *)endTime{
-    [[GKBabySitter inst] baby].currAction = [NSNumber numberWithInt:GK_E_Action_IDLE];
+    [GKBabySitter baby].currAction = [NSNumber numberWithInt:GK_E_Action_IDLE];
 }
 
 +(GK_E_Action)getCurrBabyAction{
-    return (GK_E_Action)[[GKBabySitter inst] baby].currAction;
+    return (GK_E_Action)[GKBabySitter baby].currAction;
 }
 
 +(NSString *)getCurrBabyActionDescription{
-    return [GKBabySitter getActionDescription:(GK_E_Action)[[GKBabySitter inst] baby].currAction];
+    return [GKBabySitter getActionDescription:(GK_E_Action)[GKBabySitter baby].currAction];
 }
 
 +(NSString *)getActionDescription:(GK_E_Action)action{
@@ -69,6 +91,10 @@ static GKBabySitter *instance;
         default:
             return @"";
     }
+}
+
++(bool)isLastActionInProgress{
+    return [self getCurrBabyAction] != GK_E_Action_IDLE;
 }
 
 

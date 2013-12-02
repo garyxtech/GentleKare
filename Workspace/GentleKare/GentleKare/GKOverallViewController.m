@@ -25,7 +25,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    _actionStartController = [self.storyboard instantiateViewControllerWithIdentifier:@"VC_ACTION_START"];
+    UIView *view = _actionStartController.view;
+    NSLog(@"%@", view);
+    
+    _actionEndController = [self.storyboard instantiateViewControllerWithIdentifier:@"VC_ACTION_END"];
+    view = _actionEndController.view;
+    NSLog(@"%@", view);
+    
+    view = nil;
+    
+    [self loadBabyData];
+}
+
+-(void) loadBabyData{
+    [_lblBabyName setText:[GKBabySitter baby].name];
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,18 +49,14 @@
     // Dispose of any resources that can be recreated.
 }
 
--(GKActionStartViewController*) vcActionStart{
-    if(_vcActionStart==nil){
-        _vcActionStart = [self.storyboard instantiateViewControllerWithIdentifier:@"VC_ACTION_START"];
-    }
-    return _vcActionStart;
-}
-
 -(void)onTriggerFeeding:(id)sender{
-    [[self vcActionStart] loadAction:GK_E_Action_FEED isStart:true];
-    [self performSegueWithIdentifier:@"SG_ACTION_START" sender:self];
+    if([GKBabySitter isLastActionInProgress]){
+        [_actionEndController resetData];
+        [self presentViewController:_actionEndController animated:true completion:nil];
+    }else{
+        [_actionStartController loadAction:GK_E_Action_FEED];
+        [self presentViewController:_actionStartController animated:true completion:nil];
+    }
 }
-
-
 
 @end

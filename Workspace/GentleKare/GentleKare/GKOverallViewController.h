@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "GKActionStartViewController.h"
+#import "GKActionEndViewController.h"
 
 @interface GKOverallViewController : UIViewController{
-    GKActionStartViewController *_vcActionStart;
+    IBOutlet UILabel *_lblBabyName;
+    
+    GKActionStartViewController *_actionStartController;
+    GKActionEndViewController *_actionEndController;
 }
 
 -(IBAction)onTriggerFeeding:(id)sender;

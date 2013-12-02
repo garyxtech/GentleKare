@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		161E9B03184CCCBE008314CD /* GentleKare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 161E9B01184CCCBE008314CD /* GentleKare.xcdatamodeld */; };
-		161E9B12184CD5E9008314CD /* GKAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 161E9B11184CD5E9008314CD /* GKAction.m */; };
-		161E9B15184CD5E9008314CD /* GKBaby.m in Sources */ = {isa = PBXBuildFile; fileRef = 161E9B14184CD5E9008314CD /* GKBaby.m */; };
 		16632751184CC55900048D7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632750184CC55900048D7E /* Foundation.framework */; };
 		16632753184CC55900048D7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632752184CC55900048D7E /* CoreGraphics.framework */; };
 		16632755184CC55900048D7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632754184CC55900048D7E /* UIKit.framework */; };
@@ -28,6 +26,9 @@
 		16632793184CC7A300048D7E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632792184CC7A300048D7E /* CoreData.framework */; };
 		16632795184CC7D600048D7E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16632794184CC7D600048D7E /* MainStoryboard.storyboard */; };
 		16AA3E50184CCB0600740CFC /* GKBabyRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AA3E4F184CCB0600740CFC /* GKBabyRepo.m */; };
+		16EE013E184CDA1C00923E59 /* GKActionEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EE013D184CDA1C00923E59 /* GKActionEndViewController.m */; };
+		16EE0144184CDB8500923E59 /* GKAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EE0143184CDB8500923E59 /* GKAction.m */; };
+		16EE0147184CDB8500923E59 /* GKBaby.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EE0146184CDB8500923E59 /* GKBaby.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,10 +43,6 @@
 
 /* Begin PBXFileReference section */
 		161E9B02184CCCBE008314CD /* GentleKare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GentleKare.xcdatamodel; sourceTree = "<group>"; };
-		161E9B10184CD5E9008314CD /* GKAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAction.h; sourceTree = "<group>"; };
-		161E9B11184CD5E9008314CD /* GKAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAction.m; sourceTree = "<group>"; };
-		161E9B13184CD5E9008314CD /* GKBaby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBaby.h; sourceTree = "<group>"; };
-		161E9B14184CD5E9008314CD /* GKBaby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBaby.m; sourceTree = "<group>"; };
 		1663274D184CC55900048D7E /* GentleKare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GentleKare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16632750184CC55900048D7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		16632752184CC55900048D7E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -73,6 +70,12 @@
 		16632794184CC7D600048D7E /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		16AA3E4E184CCB0600740CFC /* GKBabyRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBabyRepo.h; sourceTree = "<group>"; };
 		16AA3E4F184CCB0600740CFC /* GKBabyRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBabyRepo.m; sourceTree = "<group>"; };
+		16EE013C184CDA1C00923E59 /* GKActionEndViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKActionEndViewController.h; sourceTree = "<group>"; };
+		16EE013D184CDA1C00923E59 /* GKActionEndViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKActionEndViewController.m; sourceTree = "<group>"; };
+		16EE0142184CDB8500923E59 /* GKAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAction.h; sourceTree = "<group>"; };
+		16EE0143184CDB8500923E59 /* GKAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAction.m; sourceTree = "<group>"; };
+		16EE0145184CDB8500923E59 /* GKBaby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBaby.h; sourceTree = "<group>"; };
+		16EE0146184CDB8500923E59 /* GKBaby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBaby.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +195,8 @@
 				16632789184CC71000048D7E /* GKActionStartViewController.m */,
 				1663278A184CC71000048D7E /* GKOverallViewController.h */,
 				1663278B184CC71000048D7E /* GKOverallViewController.m */,
+				16EE013C184CDA1C00923E59 /* GKActionEndViewController.h */,
+				16EE013D184CDA1C00923E59 /* GKActionEndViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -201,10 +206,10 @@
 			children = (
 				161E9B01184CCCBE008314CD /* GentleKare.xcdatamodeld */,
 				1663278E184CC71900048D7E /* GKType.h */,
-				161E9B10184CD5E9008314CD /* GKAction.h */,
-				161E9B11184CD5E9008314CD /* GKAction.m */,
-				161E9B13184CD5E9008314CD /* GKBaby.h */,
-				161E9B14184CD5E9008314CD /* GKBaby.m */,
+				16EE0142184CDB8500923E59 /* GKAction.h */,
+				16EE0143184CDB8500923E59 /* GKAction.m */,
+				16EE0145184CDB8500923E59 /* GKBaby.h */,
+				16EE0146184CDB8500923E59 /* GKBaby.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -322,11 +327,12 @@
 				16632761184CC55A00048D7E /* GKAppDelegate.m in Sources */,
 				1663278C184CC71000048D7E /* GKActionStartViewController.m in Sources */,
 				161E9B03184CCCBE008314CD /* GentleKare.xcdatamodeld in Sources */,
-				161E9B12184CD5E9008314CD /* GKAction.m in Sources */,
 				1663275D184CC55A00048D7E /* main.m in Sources */,
-				161E9B15184CD5E9008314CD /* GKBaby.m in Sources */,
 				16AA3E50184CCB0600740CFC /* GKBabyRepo.m in Sources */,
+				16EE013E184CDA1C00923E59 /* GKActionEndViewController.m in Sources */,
+				16EE0147184CDB8500923E59 /* GKBaby.m in Sources */,
 				16632791184CC72700048D7E /* GKBabySitter.m in Sources */,
+				16EE0144184CDB8500923E59 /* GKAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

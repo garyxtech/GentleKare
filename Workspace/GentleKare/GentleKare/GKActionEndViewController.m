@@ -1,18 +1,18 @@
 //
-//  GKActionStartViewController.m
-//  GeneralKare
+//  GKActionEndViewController.m
+//  GentleKare
 //
-//  Created by 薛洪 on 13-12-1.
+//  Created by 薛洪 on 13-12-2.
 //  Copyright (c) 2013年 薛洪. All rights reserved.
 //
 
-#import "GKActionStartViewController.h"
+#import "GKActionEndViewController.h"
 
-@interface GKActionStartViewController ()
+@interface GKActionEndViewController ()
 
 @end
 
-@implementation GKActionStartViewController
+@implementation GKActionEndViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,10 +23,9 @@
     return self;
 }
 
--(void) loadAction: (GK_E_Action) action{
-    _action = action;
+-(void) resetData{
     [_lblCurrentState setText:[[GKBabySitter getCurrBabyActionDescription] stringByAppendingString:@"中"]];
-    [_lblActionDescrition setText:[GKBabySitter getActionDescription:action]];
+    [_lblActionDescrition setText:[GKBabySitter getCurrBabyActionDescription]];
 }
 
 -(void)onTriggerCancel:(id)sender{

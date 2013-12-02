@@ -1,23 +1,21 @@
 //
-//  GKActionStartViewController.h
-//  GeneralKare
+//  GKActionEndViewController.h
+//  GentleKare
 //
-//  Created by 薛洪 on 13-12-1.
+//  Created by 薛洪 on 13-12-2.
 //  Copyright (c) 2013年 薛洪. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface GKActionStartViewController : UIViewController
+@interface GKActionEndViewController : UIViewController
 {
     IBOutlet UILabel *_lblCurrentState;
     IBOutlet UILabel *_lblActionDescrition;
     IBOutlet UIDatePicker *_pkrStartTime;
-    
-    GK_E_Action _action;
 }
 
--(void) loadAction: (GK_E_Action) action;
+-(void) resetData;
 
 -(IBAction)onTriggerConfirm:(id)sender;
 

@@ -13,6 +13,8 @@
     GKBaby *_baby;
 }
 
++(GKBaby*) baby;
+
 +(GK_E_Action) getCurrBabyAction;
 
 +(NSString*) getCurrBabyActionDescription;
@@ -22,5 +24,7 @@
 +(void) action:(GK_E_Action) action at:(NSDate*) startTime;
 
 +(void) finishAt:(NSDate*) endTime;
+
++(bool) isLastActionInProgress;
 
 @end
