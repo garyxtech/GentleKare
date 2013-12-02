@@ -8,6 +8,7 @@
 
 #import "GKBabySitter.h"
 #import "GKType.h"
+#import "GKBabyRepo.h"
 
 @implementation GKBabySitter
 
@@ -29,10 +30,7 @@ static GKBabySitter *instance;
 }
 
 -(void) initData{
-    _baby = [[GKBaby alloc] init];
-    _baby.lastName = @"川";
-    _baby.firstName = @"川";
-    _baby.gender = [NSNumber numberWithInt:1];
+    _baby = [GKBabyRepo findOrCreateBabyForName:@"川川"];
     _baby.currAction = [NSNumber numberWithInt:GK_E_Action_IDLE];
 }
 

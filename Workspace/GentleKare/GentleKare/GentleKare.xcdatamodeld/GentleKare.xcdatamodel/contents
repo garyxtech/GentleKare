@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13A603" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="GKAction" representedClassName="GKAction" syncable="YES">
+        <attribute name="actionType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="endTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="baby" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GKBaby" inverseName="recentActions" inverseEntity="GKBaby" syncable="YES"/>
+    </entity>
+    <entity name="GKBaby" representedClassName="GKBaby" syncable="YES">
+        <attribute name="currAction" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="recentActions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GKAction" inverseName="baby" inverseEntity="GKAction" syncable="YES"/>
+    </entity>
+    <fetchRequest name="FindBabyByName" entity="GKBaby" predicateString="name == &quot;$NAME&quot;"/>
+    <fetchRequest name="FindFirstBaby" entity="GKBaby"/>
+    <elements>
+        <element name="GKAction" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="GKBaby" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>

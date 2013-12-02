@@ -1,8 +1,8 @@
 //
 //  GKBaby.m
-//  GeneralKare
+//  GentleKare
 //
-//  Created by 薛洪 on 13-12-1.
+//  Created by 薛洪 on 13-12-2.
 //  Copyright (c) 2013年 薛洪. All rights reserved.
 //
 
@@ -13,9 +13,8 @@
 @implementation GKBaby
 
 @dynamic currAction;
-@dynamic firstName;
 @dynamic gender;
-@dynamic lastName;
+@dynamic name;
 @dynamic recentActions;
 
 @end
