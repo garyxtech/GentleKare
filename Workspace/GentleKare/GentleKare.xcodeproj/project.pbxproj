@@ -27,6 +27,10 @@
 		16632795184CC7D600048D7E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16632794184CC7D600048D7E /* MainStoryboard.storyboard */; };
 		1678733E184DFBF500967E7D /* GKHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1678733D184DFBF500967E7D /* GKHistoryViewController.m */; };
 		16787342184DFF4800967E7D /* GKUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 16787341184DFF4800967E7D /* GKUtil.m */; };
+		16787346184E300D00967E7D /* bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 16787344184E300D00967E7D /* bottle.png */; };
+		16787347184E300D00967E7D /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 16787345184E300D00967E7D /* play.png */; };
+		16787349184E31C700967E7D /* sleep.png in Resources */ = {isa = PBXBuildFile; fileRef = 16787348184E31C700967E7D /* sleep.png */; };
+		1678734B184E33A300967E7D /* poo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1678734A184E33A300967E7D /* poo.png */; };
 		16AA3E50184CCB0600740CFC /* GKBabyRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AA3E4F184CCB0600740CFC /* GKBabyRepo.m */; };
 		16EE013E184CDA1C00923E59 /* GKActionEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EE013D184CDA1C00923E59 /* GKActionEndViewController.m */; };
 		16EE0144184CDB8500923E59 /* GKAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EE0143184CDB8500923E59 /* GKAction.m */; };
@@ -74,6 +78,10 @@
 		1678733D184DFBF500967E7D /* GKHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKHistoryViewController.m; sourceTree = "<group>"; };
 		16787340184DFF4700967E7D /* GKUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUtil.h; sourceTree = "<group>"; };
 		16787341184DFF4800967E7D /* GKUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUtil.m; sourceTree = "<group>"; };
+		16787344184E300D00967E7D /* bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle.png; sourceTree = "<group>"; };
+		16787345184E300D00967E7D /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		16787348184E31C700967E7D /* sleep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sleep.png; sourceTree = "<group>"; };
+		1678734A184E33A300967E7D /* poo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poo.png; sourceTree = "<group>"; };
 		16AA3E4E184CCB0600740CFC /* GKBabyRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBabyRepo.h; sourceTree = "<group>"; };
 		16AA3E4F184CCB0600740CFC /* GKBabyRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBabyRepo.m; sourceTree = "<group>"; };
 		16EE013C184CDA1C00923E59 /* GKActionEndViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKActionEndViewController.h; sourceTree = "<group>"; };
@@ -238,6 +246,10 @@
 		16787343184E1C8200967E7D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				1678734A184E33A300967E7D /* poo.png */,
+				16787348184E31C700967E7D /* sleep.png */,
+				16787344184E300D00967E7D /* bottle.png */,
+				16787345184E300D00967E7D /* play.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -330,9 +342,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1678734B184E33A300967E7D /* poo.png in Resources */,
 				16632795184CC7D600048D7E /* MainStoryboard.storyboard in Resources */,
+				16787349184E31C700967E7D /* sleep.png in Resources */,
+				16787347184E300D00967E7D /* play.png in Resources */,
 				1663275B184CC55A00048D7E /* InfoPlist.strings in Resources */,
 				16632763184CC55A00048D7E /* Images.xcassets in Resources */,
+				16787346184E300D00967E7D /* bottle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
