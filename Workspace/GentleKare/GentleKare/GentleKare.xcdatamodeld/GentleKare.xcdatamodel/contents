@@ -12,7 +12,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="recentActions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="GKAction" inverseName="baby" inverseEntity="GKAction" syncable="YES"/>
     </entity>
-    <fetchRequest name="FindBabyByName" entity="GKBaby" predicateString="name == &quot;$NAME&quot;"/>
+    <fetchRequest name="FindBabyByName" entity="GKBaby" predicateString="name == $NAME"/>
     <fetchRequest name="FindFirstBaby" entity="GKBaby"/>
     <elements>
         <element name="GKAction" positionX="0" positionY="0" width="0" height="0"/>

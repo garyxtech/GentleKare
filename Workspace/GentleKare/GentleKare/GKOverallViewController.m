@@ -53,14 +53,34 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)onTriggerFeeding:(id)sender{
+-(void)onTriggerAction:(id)sender{
     if([GKBabySitter isLastActionInProgress]){
         [_actionEndController resetData];
         [self presentViewController:_actionEndController animated:true completion:nil];
     }else{
-        [_actionStartController loadAction:GK_E_Action_FEED];
+        GK_E_Action action = [self getTriggerAction:sender];
+        if(action == GK_E_Action_IDLE){
+            return;
+        }
+        [_actionStartController loadAction:action];
         [self presentViewController:_actionStartController animated:true completion:nil];
     }
+}
+
+-(GK_E_Action)getTriggerAction:(id)sender{
+    if(sender == _btnFeed){
+        return GK_E_Action_FEED;
+    }
+    if(sender == _btnDispose){
+        return GK_E_Action_DISPOSE;
+    }
+    if(sender == _btnPlay){
+        return GK_E_Action_PLAY;
+    }
+    if(sender == _btnSleep){
+        return GK_E_Action_SLEEP;
+    }
+    return GK_E_Action_IDLE;
 }
 
 -(void)didConfirmWithDate:(NSDate *)date forAction:(GK_E_Action)action isForBegin:(bool)isStart{

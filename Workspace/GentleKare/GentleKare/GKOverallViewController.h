@@ -26,6 +26,6 @@
     GKActionEndViewController *_actionEndController;
 }
 
--(IBAction)onTriggerFeeding:(id)sender;
+-(IBAction)onTriggerAction:(id)sender;
 
 @end
