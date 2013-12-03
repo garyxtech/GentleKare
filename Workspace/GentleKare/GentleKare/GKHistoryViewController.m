@@ -67,9 +67,29 @@
         NSString* endTime = [GKUtil dateToStrAsTimeOnly:action.endTime];
         desc = [desc stringByAppendingString:[NSString stringWithFormat:@"    从 %@ 到 %@", startTime, endTime]];
         [lbl setText:desc];
+        
+        UIImageView *backgroundCellImage=[[UIImageView alloc] initWithFrame:CGRectMake(4, 8, 30, 30)];
+        backgroundCellImage.image=[UIImage imageNamed:[self getImageNameByType:actionEnum]];
+        [cell.contentView addSubview:backgroundCellImage];
     }
     
+    
     return cell;
+}
+
+-(NSString*) getImageNameByType: (GK_E_Action) action{
+    switch (action) {
+        case GK_E_Action_FEED:
+            return @"bottle.png";
+        case GK_E_Action_PLAY:
+            return @"play.png";
+        case GK_E_Action_DISPOSE:
+            return @"poo.png";
+        case GK_E_Action_SLEEP:
+            return @"sleep.png";
+        default:
+            return @"";
+    }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
