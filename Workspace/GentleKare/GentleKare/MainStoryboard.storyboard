@@ -114,7 +114,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.84313732385635376" green="0.95686280727386475" blue="0.95686280727386475" alpha="1" colorSpace="deviceRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="概况" id="K2J-Ce-ZRe"/>
+                    <tabBarItem key="tabBarItem" title="概况" image="home.png" id="K2J-Ce-ZRe"/>
                     <navigationItem key="navigationItem" id="nMj-8Y-Bwf"/>
                     <connections>
                         <outlet property="_btnDispose" destination="9OZ-fO-6KH" id="hvd-yC-fqa"/>
@@ -137,7 +137,8 @@
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="zQo-83-mKv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.82806521045918369" green="0.71124347105583696" blue="0.57994949563533849" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.08235294371843338" green="0.53333336114883423" blue="0.7568628191947937" alpha="1" colorSpace="deviceRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="zse-LS-vKC">
                                 <rect key="frame" x="0.0" y="55" width="320" height="44"/>
@@ -153,7 +154,7 @@
                             <outlet property="delegate" destination="fr8-xB-x3P" id="cn3-q3-5SL"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="历史" id="Dd1-Ym-EZZ"/>
+                    <tabBarItem key="tabBarItem" title="历史" image="history.png" id="Dd1-Ym-EZZ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZUC-YD-KiY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -362,6 +363,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </scenes>
     <resources>
         <image name="bottle.png" width="40" height="40"/>
+        <image name="history.png" width="30" height="30"/>
+        <image name="home.png" width="30" height="30"/>
         <image name="play.png" width="40" height="40"/>
         <image name="poo.png" width="40" height="40"/>
         <image name="sleep.png" width="40" height="40"/>
