@@ -11,6 +11,9 @@
 @interface GKBabySitter : NSObject
 {
     GKBaby *_baby;
+    int _currGroupCount;
+    NSMutableArray *_arArActionByGroupIdx;
+    NSMutableDictionary *_dictDate2Idx;
 }
 
 +(GKBaby*) baby;
@@ -26,5 +29,11 @@
 +(void) finishAt:(NSDate*) endTime;
 
 +(bool) isLastActionInProgress;
+
++(int) getGroupCount;
+
++(NSArray *) getActionForGroupIdx:(NSInteger) idx;
+
++(NSObject *) getGroupCompareKeyForIdx:(NSInteger) idx;
 
 @end

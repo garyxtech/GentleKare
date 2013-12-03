@@ -16,6 +16,7 @@
 #endif
 
 #import "GKType.h"
+#import "GKUtil.h"
 #import "GKBaby.h"
 #import "GKAction.h"
 #import "GKBabySitter.h"

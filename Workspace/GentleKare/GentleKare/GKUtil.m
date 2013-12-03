@@ -1,0 +1,74 @@
+//
+//  GRY1Util.m
+//  gary1
+//
+//  Created by 薛洪 on 13-11-26.
+//  Copyright (c) 2013年 薛洪. All rights reserved.
+//
+
+#import "GKUtil.h"
+
+@implementation GKUtil
+
+static const NSDateFormatter *DATEFORMATTER_DAYTIME;
+static const NSDateFormatter *DATEFORMATTER_DAY;
+static const NSDateFormatter *DATEFORMATTER_TIME;
+
++(void) initialize{
+    
+    DATEFORMATTER_DAYTIME = [[NSDateFormatter alloc] init];
+    [DATEFORMATTER_DAYTIME setTimeZone:[NSTimeZone localTimeZone]];
+    [DATEFORMATTER_DAYTIME setDateFormat:@"yyyy/MM/dd hh:mm"];
+    
+    DATEFORMATTER_DAY = [[NSDateFormatter alloc] init];
+    [DATEFORMATTER_DAY setTimeZone:[NSTimeZone localTimeZone]];
+    [DATEFORMATTER_DAY setDateFormat:@"yyyy/MM/dd"];
+    
+    DATEFORMATTER_TIME = [[NSDateFormatter alloc] init];
+    [DATEFORMATTER_TIME setTimeZone:[NSTimeZone localTimeZone]];
+    [DATEFORMATTER_TIME setDateFormat:@"hh:mm"];
+}
+
++(NSString*) nvl:(NSString*) src{
+    return [self nvl:src to:@""];
+}
+
++(NSString*) nvl:(NSString*) src to:(NSString*) defaultValue{
+    return src==nil?defaultValue:src;
+}
+
++(NSObject *) nvlObj:(NSObject *)src to:(NSObject *)defaultValue{
+    return src==nil?defaultValue:src;
+}
+
++(NSString *)dateToStr:(NSDate *)date{
+    return [GKUtil nvl:[DATEFORMATTER_DAYTIME stringFromDate:date]];
+}
+
++(NSString *)dateToStrAsDayOnly:(NSDate *)date{
+    return [GKUtil nvl:[DATEFORMATTER_DAY stringFromDate:date]];
+}
+
++(NSString* ) dateToStrAsTimeOnly: (NSDate*) date;{
+    return [GKUtil nvl:[DATEFORMATTER_TIME stringFromDate:date]];
+}
+
++(NSTimeInterval)getSeconds:(NSDate *)date{
+    unsigned unitFlags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDateComponents *comp = [cal components:unitFlags fromDate:date];
+    return comp.hour * 60 * 60 + comp.minute * 60 + comp.second;
+}
+
++(NSDate *)stripTime:(NSDate *)date{
+    if(date==nil) {
+        return nil;
+    }
+    unsigned int flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    NSDateComponents* components = [calendar components:flags fromDate:date];
+    NSDate* dateOnly = [calendar dateFromComponents:components];
+    return dateOnly;
+}
+
+@end

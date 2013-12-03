@@ -25,6 +25,8 @@
 		16632791184CC72700048D7E /* GKBabySitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 16632790184CC72700048D7E /* GKBabySitter.m */; };
 		16632793184CC7A300048D7E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632792184CC7A300048D7E /* CoreData.framework */; };
 		16632795184CC7D600048D7E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16632794184CC7D600048D7E /* MainStoryboard.storyboard */; };
+		1678733E184DFBF500967E7D /* GKHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1678733D184DFBF500967E7D /* GKHistoryViewController.m */; };
+		16787342184DFF4800967E7D /* GKUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 16787341184DFF4800967E7D /* GKUtil.m */; };
 		16AA3E50184CCB0600740CFC /* GKBabyRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AA3E4F184CCB0600740CFC /* GKBabyRepo.m */; };
 		16EE013E184CDA1C00923E59 /* GKActionEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EE013D184CDA1C00923E59 /* GKActionEndViewController.m */; };
 		16EE0144184CDB8500923E59 /* GKAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EE0143184CDB8500923E59 /* GKAction.m */; };
@@ -68,6 +70,10 @@
 		16632790184CC72700048D7E /* GKBabySitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBabySitter.m; sourceTree = "<group>"; };
 		16632792184CC7A300048D7E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		16632794184CC7D600048D7E /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		1678733C184DFBF500967E7D /* GKHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKHistoryViewController.h; sourceTree = "<group>"; };
+		1678733D184DFBF500967E7D /* GKHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKHistoryViewController.m; sourceTree = "<group>"; };
+		16787340184DFF4700967E7D /* GKUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUtil.h; sourceTree = "<group>"; };
+		16787341184DFF4800967E7D /* GKUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUtil.m; sourceTree = "<group>"; };
 		16AA3E4E184CCB0600740CFC /* GKBabyRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBabyRepo.h; sourceTree = "<group>"; };
 		16AA3E4F184CCB0600740CFC /* GKBabyRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBabyRepo.m; sourceTree = "<group>"; };
 		16EE013C184CDA1C00923E59 /* GKActionEndViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKActionEndViewController.h; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 		16632756184CC55A00048D7E /* GentleKare */ = {
 			isa = PBXGroup;
 			children = (
+				1678733F184DFF2B00967E7D /* Util */,
 				16AA3E4D184CCAEE00740CFC /* DataAccess */,
 				16632781184CC6D700048D7E /* Model */,
 				16632780184CC6D000048D7E /* UI */,
@@ -199,6 +206,8 @@
 				16EE013C184CDA1C00923E59 /* GKActionEndViewController.h */,
 				16EE013D184CDA1C00923E59 /* GKActionEndViewController.m */,
 				16EE0148184CE75000923E59 /* GKActionConfirmDelete.h */,
+				1678733C184DFBF500967E7D /* GKHistoryViewController.h */,
+				1678733D184DFBF500967E7D /* GKHistoryViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -214,6 +223,15 @@
 				16EE0146184CDB8500923E59 /* GKBaby.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		1678733F184DFF2B00967E7D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				16787340184DFF4700967E7D /* GKUtil.h */,
+				16787341184DFF4800967E7D /* GKUtil.m */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		16AA3E4D184CCAEE00740CFC /* DataAccess */ = {
@@ -333,7 +351,9 @@
 				16AA3E50184CCB0600740CFC /* GKBabyRepo.m in Sources */,
 				16EE013E184CDA1C00923E59 /* GKActionEndViewController.m in Sources */,
 				16EE0147184CDB8500923E59 /* GKBaby.m in Sources */,
+				1678733E184DFBF500967E7D /* GKHistoryViewController.m in Sources */,
 				16632791184CC72700048D7E /* GKBabySitter.m in Sources */,
+				16787342184DFF4800967E7D /* GKUtil.m in Sources */,
 				16EE0144184CDB8500923E59 /* GKAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

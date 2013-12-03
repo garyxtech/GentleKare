@@ -32,6 +32,7 @@ static GKBabySitter *instance;
 -(void) initData{
     _baby = [GKBabyRepo findOrCreateBabyForName:@"川川"];
     [self updateCurrAction];
+    [self updateActionGroup];
     [self save];
 }
 
@@ -55,6 +56,28 @@ static GKBabySitter *instance;
     }
     
     _baby.currAction = [NSNumber numberWithInt:foundActionType];
+}
+
+-(void) updateActionGroup{
+    _arArActionByGroupIdx = [[NSMutableArray alloc] init];
+    _dictDate2Idx = [[NSMutableDictionary alloc] init];
+    for(GKAction *curr in [_baby recentActions]){
+        NSDate* keyDate = [self keyDate:curr];
+        if(keyDate == nil){
+            continue;
+        }
+        NSDate* day = [GKUtil stripTime:keyDate];
+        NSNumber* idx = [_dictDate2Idx objectForKey:day];
+        if( idx == nil){
+            NSMutableArray *arAction = [[NSMutableArray alloc] init];
+            [_arArActionByGroupIdx addObject:arAction];
+            idx = [NSNumber numberWithInt:[_arArActionByGroupIdx count] - 1];
+            [_dictDate2Idx setObject:idx forKey:day];
+        }
+        
+        NSMutableArray* arAction = [_arArActionByGroupIdx objectAtIndex:[idx intValue]];
+        [arAction addObject:curr];
+    }
 }
 
 -(GKAction *) _getLastUnfinishedAction{
@@ -86,6 +109,7 @@ static GKBabySitter *instance;
     }
     [[self inst] updateCurrAction];
     [[self inst] save];
+    [[self inst] updateActionGroup];
 }
 
 +(void)finishAt:(NSDate *)endTime{
@@ -93,6 +117,7 @@ static GKBabySitter *instance;
     lastAction.endTime = endTime;
     [[self inst] updateCurrAction];
     [[self inst] save];
+    [[self inst] updateActionGroup];
 }
 
 +(GK_E_Action)getCurrBabyAction{
@@ -124,6 +149,45 @@ static GKBabySitter *instance;
 +(bool)isLastActionInProgress{
     return [self getCurrBabyAction] != GK_E_Action_IDLE;
 }
+
++(int)getGroupCount{
+    return [[self inst] _getGroupCount];
+}
+
+-(int) _getGroupCount{
+    return [_arArActionByGroupIdx count];
+}
+
+-(NSDate*) keyDate:(GKAction*) action{
+    return action.endTime == nil?action.startTime:action.endTime;
+}
+
++(NSArray *)getActionForGroupIdx:(NSInteger)idx{
+    return [[self inst] _getActionForGroupIdx:idx];
+}
+
+-(NSArray *)_getActionForGroupIdx:(NSInteger)idx{
+    if([_arArActionByGroupIdx count] > idx){
+        return [_arArActionByGroupIdx objectAtIndex:idx];
+    }
+    return nil;
+}
+
++(NSObject *)getGroupCompareKeyForIdx:(NSInteger)idx{
+    return [[self inst] _getGroupCompareKeyForIdx:idx];
+}
+
+-(NSObject *)_getGroupCompareKeyForIdx:(NSInteger)idx{
+    for(NSDate* key in _dictDate2Idx){
+        NSNumber* num = [_dictDate2Idx objectForKey:key];
+        NSInteger currIdx = [num intValue];
+        if(currIdx == idx){
+            return key;
+        }
+    }
+    return nil;
+}
+
 
 
 @end
