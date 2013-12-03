@@ -110,7 +110,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="K2J-Ce-ZRe"/>
+                    <tabBarItem key="tabBarItem" title="概况" id="K2J-Ce-ZRe"/>
                     <navigationItem key="navigationItem" id="nMj-8Y-Bwf"/>
                     <connections>
                         <outlet property="_btnDispose" destination="9OZ-fO-6KH" id="hvd-yC-fqa"/>
@@ -149,7 +149,7 @@
                             <outlet property="delegate" destination="fr8-xB-x3P" id="cn3-q3-5SL"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="Dd1-Ym-EZZ"/>
+                    <tabBarItem key="tabBarItem" title="历史" id="Dd1-Ym-EZZ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZUC-YD-KiY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

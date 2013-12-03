@@ -144,6 +144,7 @@
 		16632756184CC55A00048D7E /* GentleKare */ = {
 			isa = PBXGroup;
 			children = (
+				16787343184E1C8200967E7D /* Images */,
 				1678733F184DFF2B00967E7D /* Util */,
 				16AA3E4D184CCAEE00740CFC /* DataAccess */,
 				16632781184CC6D700048D7E /* Model */,
@@ -232,6 +233,13 @@
 				16787341184DFF4800967E7D /* GKUtil.m */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		16787343184E1C8200967E7D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		16AA3E4D184CCAEE00740CFC /* DataAccess */ = {
