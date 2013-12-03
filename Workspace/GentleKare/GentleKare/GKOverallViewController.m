@@ -54,11 +54,11 @@
 }
 
 -(void)onTriggerAction:(id)sender{
-    if([GKBabySitter isLastActionInProgress]){
+    GK_E_Action action = [self getTriggerAction:sender];
+    if([GKBabySitter isLastActionInProgress] && action != GK_E_Action_DISPOSE){
         [_actionEndController resetData];
         [self presentViewController:_actionEndController animated:true completion:nil];
     }else{
-        GK_E_Action action = [self getTriggerAction:sender];
         if(action == GK_E_Action_IDLE){
             return;
         }

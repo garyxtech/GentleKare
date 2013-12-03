@@ -130,7 +130,7 @@ static GKBabySitter *instance;
     newAction.startTime = startTime;
     newAction.baby = [GKBabySitter baby];
     if(action == GK_E_Action_DISPOSE){
-        [self finishAt:startTime];
+        newAction.endTime = startTime;
     }
     [[self inst] updateCurrAction];
     [[self inst] save];
