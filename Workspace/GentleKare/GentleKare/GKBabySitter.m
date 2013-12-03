@@ -59,23 +59,48 @@ static GKBabySitter *instance;
 }
 
 -(void) updateActionGroup{
+    
     _arArActionByGroupIdx = [[NSMutableArray alloc] init];
-    _dictDate2Idx = [[NSMutableDictionary alloc] init];
+    _arDaysSorted = nil;
+    
+    NSMutableArray* arDays = [[NSMutableArray alloc] init];
     for(GKAction *curr in [_baby recentActions]){
         NSDate* keyDate = [self keyDate:curr];
         if(keyDate == nil){
             continue;
         }
         NSDate* day = [GKUtil stripTime:keyDate];
-        NSNumber* idx = [_dictDate2Idx objectForKey:day];
-        if( idx == nil){
-            NSMutableArray *arAction = [[NSMutableArray alloc] init];
-            [_arArActionByGroupIdx addObject:arAction];
-            idx = [NSNumber numberWithInt:[_arArActionByGroupIdx count] - 1];
-            [_dictDate2Idx setObject:idx forKey:day];
+        if([arDays containsObject:day]){
+            continue;
+        }
+        [arDays addObject:day];
+    }
+    
+    _arDaysSorted = [arDays sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        NSDate* d1 = (NSDate*) obj1;
+        NSDate* d2 = (NSDate*) obj2;
+        return [d2 compare:d1];
+    }];
+    
+    for(GKAction *curr in [_baby recentActions]){
+        
+        NSDate* keyDate = [self keyDate:curr];
+        if(keyDate == nil){
+            continue;
         }
         
-        NSMutableArray* arAction = [_arArActionByGroupIdx objectAtIndex:[idx intValue]];
+        NSDate* day = [GKUtil stripTime:keyDate];
+        NSUInteger idx = [_arDaysSorted indexOfObject:day];
+        
+        if(idx>=[_arArActionByGroupIdx count]){
+            for(int i=[_arArActionByGroupIdx count]; i<=idx; i++){
+                NSMutableArray *arAction = [[NSMutableArray alloc] init];
+                [_arArActionByGroupIdx addObject:arAction];
+            }
+        }
+        
+        NSMutableArray* arAction = [_arArActionByGroupIdx objectAtIndex:idx];
+        
         [arAction addObject:curr];
     }
 }
@@ -134,7 +159,7 @@ static GKBabySitter *instance;
         case GK_E_Action_IDLE:
             return @"呆左";
         case GK_E_Action_FEED:
-            return @"喝奶奶";
+            return @"喝奶";
         case GK_E_Action_PLAY:
             return @"玩耍";
         case GK_E_Action_SLEEP:
@@ -178,14 +203,7 @@ static GKBabySitter *instance;
 }
 
 -(NSObject *)_getGroupCompareKeyForIdx:(NSInteger)idx{
-    for(NSDate* key in _dictDate2Idx){
-        NSNumber* num = [_dictDate2Idx objectForKey:key];
-        NSInteger currIdx = [num intValue];
-        if(currIdx == idx){
-            return key;
-        }
-    }
-    return nil;
+    return [_arDaysSorted objectAtIndex:idx];
 }
 
 

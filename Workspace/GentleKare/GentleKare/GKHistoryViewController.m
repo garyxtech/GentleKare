@@ -61,10 +61,12 @@
     if(arAction!=nil){
         GKAction* action = [arAction objectAtIndex:indexPath.row];
         UILabel* lbl = cell.textLabel;
-        [lbl setText:[GKBabySitter getActionDescription:[action.actionType intValue]]];
-        NSString* startTime = [GKUtil dateToStr:action.startTime];
+        GK_E_Action actionEnum = (GK_E_Action) [action.actionType intValue];
+        NSString* desc = [@"    " stringByAppendingString:[GKBabySitter getActionDescription:actionEnum]];
+        NSString* startTime = [GKUtil dateToStrAsMonthDayTimeOnly:action.startTime];
         NSString* endTime = [GKUtil dateToStrAsTimeOnly:action.endTime];
-        [lbl setText:[lbl.text stringByAppendingString:[NSString stringWithFormat:@"从 %@ 到 %@", startTime, endTime]]];
+        desc = [desc stringByAppendingString:[NSString stringWithFormat:@"    从 %@ 到 %@", startTime, endTime]];
+        [lbl setText:desc];
     }
     
     return cell;

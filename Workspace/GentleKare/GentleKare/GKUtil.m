@@ -13,6 +13,8 @@
 static const NSDateFormatter *DATEFORMATTER_DAYTIME;
 static const NSDateFormatter *DATEFORMATTER_DAY;
 static const NSDateFormatter *DATEFORMATTER_TIME;
+static const NSDateFormatter *DATEFORMATTER_MONTHDAY;
+static const NSDateFormatter *DATEFORMATTER_MONTHDAYTIME;
 
 +(void) initialize{
     
@@ -23,6 +25,15 @@ static const NSDateFormatter *DATEFORMATTER_TIME;
     DATEFORMATTER_DAY = [[NSDateFormatter alloc] init];
     [DATEFORMATTER_DAY setTimeZone:[NSTimeZone localTimeZone]];
     [DATEFORMATTER_DAY setDateFormat:@"yyyy/MM/dd"];
+    
+    DATEFORMATTER_MONTHDAY = [[NSDateFormatter alloc] init];
+    [DATEFORMATTER_MONTHDAY setTimeZone:[NSTimeZone localTimeZone]];
+    [DATEFORMATTER_MONTHDAY setDateFormat:@"MM/dd"];
+    
+    DATEFORMATTER_MONTHDAYTIME = [[NSDateFormatter alloc] init];
+    [DATEFORMATTER_MONTHDAYTIME setTimeZone:[NSTimeZone localTimeZone]];
+    [DATEFORMATTER_MONTHDAYTIME setDateFormat:@"MM/dd hh:mm"];
+
     
     DATEFORMATTER_TIME = [[NSDateFormatter alloc] init];
     [DATEFORMATTER_TIME setTimeZone:[NSTimeZone localTimeZone]];
@@ -47,6 +58,14 @@ static const NSDateFormatter *DATEFORMATTER_TIME;
 
 +(NSString *)dateToStrAsDayOnly:(NSDate *)date{
     return [GKUtil nvl:[DATEFORMATTER_DAY stringFromDate:date]];
+}
+
++(NSString *)dateToStrAsMonthDayOnly:(NSDate *)date{
+    return [GKUtil nvl:[DATEFORMATTER_MONTHDAY stringFromDate:date]];
+}
+
++(NSString *)dateToStrAsMonthDayTimeOnly:(NSDate *)date{
+    return [GKUtil nvl:[DATEFORMATTER_MONTHDAYTIME stringFromDate:date]];
 }
 
 +(NSString* ) dateToStrAsTimeOnly: (NSDate*) date;{

@@ -21,6 +21,10 @@
 
 +(NSString*) dateToStr: (NSDate*) date;
 
++(NSString*) dateToStrAsMonthDayOnly: (NSDate*) date;
+
++(NSString*) dateToStrAsMonthDayTimeOnly: (NSDate*) date;
+
 +(NSString*) dateToStrAsDayOnly: (NSDate*) date;
 
 +(NSString*) dateToStrAsTimeOnly: (NSDate*) date;

@@ -13,7 +13,7 @@
     GKBaby *_baby;
     int _currGroupCount;
     NSMutableArray *_arArActionByGroupIdx;
-    NSMutableDictionary *_dictDate2Idx;
+    NSArray* _arDaysSorted;
 }
 
 +(GKBaby*) baby;
