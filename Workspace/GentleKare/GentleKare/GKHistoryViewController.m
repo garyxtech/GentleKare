@@ -26,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"HisBackground"]];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -73,6 +74,7 @@
         [cell.contentView addSubview:backgroundCellImage];
     }
     
+    cell.backgroundColor = [UIColor clearColor];
     
     return cell;
 }

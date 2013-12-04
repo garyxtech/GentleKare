@@ -99,19 +99,19 @@
 
 -(void) updateActionAvailability{
     GK_E_Action action = [GKBabySitter getCurrBabyAction];
-    _btnFeed.enabled = _btnSleep.enabled = _btnPlay.enabled = _btnExtract.enabled = false;
+    _btnFeed.hidden = _btnSleep.hidden = _btnPlay.hidden = true;
     if(action == GK_E_Action_IDLE){
-        _btnFeed.enabled = _btnSleep.enabled = _btnPlay.enabled = _btnExtract.enabled = true;
+        _btnFeed.hidden = _btnSleep.hidden = _btnPlay.hidden = false;
     }else{
         switch (action) {
             case GK_E_Action_FEED:
-                _btnFeed.enabled = true;
+                _btnFeed.hidden = false;
                 break;
             case GK_E_Action_PLAY:
-                _btnPlay.enabled = true;
+                _btnPlay.hidden = false;
                 break;
             case GK_E_Action_SLEEP:
-                _btnSleep.enabled = true;
+                _btnSleep.hidden = false;
                 break;
             default:
                 break;
