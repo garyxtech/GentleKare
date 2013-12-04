@@ -33,6 +33,7 @@
 		1678734B184E33A300967E7D /* poo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1678734A184E33A300967E7D /* poo.png */; };
 		1678734D184E379E00967E7D /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 1678734C184E379E00967E7D /* home.png */; };
 		1678734F184E37FD00967E7D /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 1678734E184E37FD00967E7D /* history.png */; };
+		167DBF9D184F87F600896772 /* gandom-wallpaper-1920x1200.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 167DBF9C184F87F600896772 /* gandom-wallpaper-1920x1200.jpg */; };
 		16AA3E50184CCB0600740CFC /* GKBabyRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AA3E4F184CCB0600740CFC /* GKBabyRepo.m */; };
 		16EE013E184CDA1C00923E59 /* GKActionEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EE013D184CDA1C00923E59 /* GKActionEndViewController.m */; };
 		16EE0144184CDB8500923E59 /* GKAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EE0143184CDB8500923E59 /* GKAction.m */; };
@@ -86,6 +87,7 @@
 		1678734A184E33A300967E7D /* poo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poo.png; sourceTree = "<group>"; };
 		1678734C184E379E00967E7D /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		1678734E184E37FD00967E7D /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
+		167DBF9C184F87F600896772 /* gandom-wallpaper-1920x1200.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "gandom-wallpaper-1920x1200.jpg"; sourceTree = "<group>"; };
 		16AA3E4E184CCB0600740CFC /* GKBabyRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBabyRepo.h; sourceTree = "<group>"; };
 		16AA3E4F184CCB0600740CFC /* GKBabyRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBabyRepo.m; sourceTree = "<group>"; };
 		16EE013C184CDA1C00923E59 /* GKActionEndViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKActionEndViewController.h; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		16632744184CC55900048D7E = {
 			isa = PBXGroup;
 			children = (
+				167DBF9B184F87F600896772 /* Resources */,
 				16632756184CC55A00048D7E /* GentleKare */,
 				1663276F184CC55A00048D7E /* GentleKareTests */,
 				1663274F184CC55900048D7E /* Frameworks */,
@@ -260,6 +263,14 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		167DBF9B184F87F600896772 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				167DBF9C184F87F600896772 /* gandom-wallpaper-1920x1200.jpg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		16AA3E4D184CCAEE00740CFC /* DataAccess */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				167DBF9D184F87F600896772 /* gandom-wallpaper-1920x1200.jpg in Resources */,
 				1678734F184E37FD00967E7D /* history.png in Resources */,
 				1678734B184E33A300967E7D /* poo.png in Resources */,
 				16632795184CC7D600048D7E /* MainStoryboard.storyboard in Resources */,
