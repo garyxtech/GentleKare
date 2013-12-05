@@ -53,6 +53,12 @@ static GKBabyRepo *_instance;
     if(baby==nil){
         baby = [[GKBabyRepo inst] createBabyByName:name];
     }
+    if(baby.birthday==nil){
+        baby.birthday = [NSDate date];
+    }
+    if(baby.height == nil){
+        baby.height = [NSNumber numberWithInt:100];
+    }
     return baby;
 }
 
