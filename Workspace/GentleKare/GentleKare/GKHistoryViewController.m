@@ -26,7 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"HisBackground"]];
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:
+                                     [UIImage imageNamed:@"HisBackground"]];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -52,29 +53,30 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CELL_ID = @"HISTORY_TABLE_CELL_ID";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_ID];
-    if(cell==nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELL_ID];
-    }
+    static NSString *CELL_ID = @"HISTORY_TABLE_CELL_ID_%d";
     
     NSArray* arAction = [GKBabySitter getActionForGroupIdx:indexPath.section];
-    if(arAction!=nil){
-        GKAction* action = [arAction objectAtIndex:indexPath.row];
-        UILabel* lbl = cell.textLabel;
-        GK_E_Action actionEnum = (GK_E_Action) [action.actionType intValue];
-        NSString* desc = [@"    " stringByAppendingString:[GKBabySitter getActionDescription:actionEnum]];
-        NSString* startTime = [GKUtil dateToStrAsMonthDayTimeOnly:action.startTime];
-        NSString* endTime = [GKUtil dateToStrAsTimeOnly:action.endTime];
-        desc = [desc stringByAppendingString:[NSString stringWithFormat:@"    从 %@ 到 %@", startTime, endTime]];
-        [lbl setText:desc];
-        
+
+    GKAction* action = [arAction objectAtIndex:indexPath.row];
+    GK_E_Action actionEnum = (GK_E_Action) [action.actionType intValue];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:CELL_ID, actionEnum]];
+    
+    if(cell==nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELL_ID];
+        cell.backgroundColor = [UIColor clearColor];
         UIImageView *backgroundCellImage=[[UIImageView alloc] initWithFrame:CGRectMake(4, 8, 30, 30)];
         backgroundCellImage.image=[UIImage imageNamed:[self getImageNameByType:actionEnum]];
         [cell.contentView addSubview:backgroundCellImage];
     }
     
-    cell.backgroundColor = [UIColor clearColor];
+    UILabel* lbl = cell.textLabel;
+    NSString* desc = [@"    " stringByAppendingString:[GKBabySitter getActionDescription:actionEnum]];
+    NSString* startTime = [GKUtil dateToStrAsMonthDayTimeOnly:action.startTime];
+    NSString* endTime = [GKUtil dateToStrAsTimeOnly:action.endTime];
+    desc = [desc stringByAppendingString:[NSString stringWithFormat:@"    从 %@ 到 %@", startTime, endTime]];
+    [lbl setText:desc];
+
     
     return cell;
 }

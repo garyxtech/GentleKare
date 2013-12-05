@@ -36,4 +36,6 @@
 
 +(NSObject *) getGroupCompareKeyForIdx:(NSInteger) idx;
 
++(GKAction *) getLastUnfinishedAction;
+
 @end

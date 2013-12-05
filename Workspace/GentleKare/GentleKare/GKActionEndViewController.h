@@ -13,9 +13,9 @@
 
 @interface GKActionEndViewController : UIViewController
 {
-    IBOutlet UILabel *_lblCurrentState;
     IBOutlet UILabel *_lblActionDescrition;
-    IBOutlet UIDatePicker *_pkrStartTime;
+    IBOutlet UILabel *_lblLastStartTime;
+    IBOutlet UIDatePicker *_pkrEndTime;
     
     GK_E_Action _action;
 }

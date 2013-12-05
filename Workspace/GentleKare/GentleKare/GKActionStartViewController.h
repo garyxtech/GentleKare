@@ -11,7 +11,6 @@
 
 @interface GKActionStartViewController : UIViewController
 {
-    IBOutlet UILabel *_lblCurrentState;
     IBOutlet UILabel *_lblActionDescrition;
     IBOutlet UIDatePicker *_pkrStartTime;
     

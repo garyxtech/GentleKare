@@ -27,8 +27,11 @@
 
 -(void) resetData{
     _action = [GKBabySitter getCurrBabyAction];
-    [_lblCurrentState setText:[[GKBabySitter getCurrBabyActionDescription] stringByAppendingString:@"中"]];
+    GKAction *lastAction = [GKBabySitter getLastUnfinishedAction];
     [_lblActionDescrition setText:[GKBabySitter getCurrBabyActionDescription]];
+    [_pkrEndTime setDate:[NSDate date]];
+    [_lblLastStartTime setText:[GKUtil dateToStr:lastAction.startTime]];
+    [_pkrEndTime setMinimumDate:lastAction.startTime];
 }
 
 -(void)onTriggerCancel:(id)sender{
@@ -37,7 +40,7 @@
 
 -(void)onTriggerConfirm:(id)sender{
     [self dismissSelf:^{
-        NSDate *date = [_pkrStartTime date];
+        NSDate *date = [_pkrEndTime date];
         [confirmDelegate didConfirmWithDate:date forAction:_action isForBegin:false];
     }];
 }

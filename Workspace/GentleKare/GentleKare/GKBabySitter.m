@@ -105,6 +105,10 @@ static GKBabySitter *instance;
     }
 }
 
++(GKAction *) getLastUnfinishedAction{
+    return [[self inst] _getLastUnfinishedAction];
+}
+
 -(GKAction *) _getLastUnfinishedAction{
     for(GKAction* currAction in [[[_baby recentActions] allObjects] reverseObjectEnumerator]){
         if(currAction.endTime){

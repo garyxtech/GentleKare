@@ -21,15 +21,14 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
 
 -(void) loadAction: (GK_E_Action) action{
     _action = action;
-    [_lblCurrentState setText:[[GKBabySitter getCurrBabyActionDescription] stringByAppendingString:@"中"]];
     [_lblActionDescrition setText:[GKBabySitter getActionDescription:action]];
+    [_pkrStartTime setDate:[NSDate date]];
 }
 
 -(void)onTriggerCancel:(id)sender{
@@ -50,7 +49,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    [_pkrStartTime setMaximumDate:[NSDate date]];
 }
 
 - (void)didReceiveMemoryWarning
