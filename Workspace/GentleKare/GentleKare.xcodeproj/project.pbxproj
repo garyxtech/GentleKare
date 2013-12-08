@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		161E9B03184CCCBE008314CD /* GentleKare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 161E9B01184CCCBE008314CD /* GentleKare.xcdatamodeld */; };
+		1646DD631852E50100658375 /* GKAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1646DD621852E50100658375 /* GKAction.m */; };
+		1646DD661852E50200658375 /* GKBaby.m in Sources */ = {isa = PBXBuildFile; fileRef = 1646DD651852E50200658375 /* GKBaby.m */; };
+		1646DD691854C64300658375 /* GKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1646DD681854C64300658375 /* GKButton.m */; };
 		16632751184CC55900048D7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632750184CC55900048D7E /* Foundation.framework */; };
 		16632753184CC55900048D7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632752184CC55900048D7E /* CoreGraphics.framework */; };
 		16632755184CC55900048D7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632754184CC55900048D7E /* UIKit.framework */; };
@@ -20,12 +23,8 @@
 		1663276C184CC55A00048D7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632754184CC55900048D7E /* UIKit.framework */; };
 		16632774184CC55A00048D7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16632772184CC55A00048D7E /* InfoPlist.strings */; };
 		16632776184CC55A00048D7E /* GentleKareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16632775184CC55A00048D7E /* GentleKareTests.m */; };
-		1663278C184CC71000048D7E /* GKActionStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16632789184CC71000048D7E /* GKActionStartViewController.m */; };
-		1663278D184CC71000048D7E /* GKOverallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1663278B184CC71000048D7E /* GKOverallViewController.m */; };
 		16632791184CC72700048D7E /* GKBabySitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 16632790184CC72700048D7E /* GKBabySitter.m */; };
 		16632793184CC7A300048D7E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632792184CC7A300048D7E /* CoreData.framework */; };
-		16632795184CC7D600048D7E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16632794184CC7D600048D7E /* MainStoryboard.storyboard */; };
-		1678733E184DFBF500967E7D /* GKHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1678733D184DFBF500967E7D /* GKHistoryViewController.m */; };
 		16787342184DFF4800967E7D /* GKUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 16787341184DFF4800967E7D /* GKUtil.m */; };
 		16787346184E300D00967E7D /* bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 16787344184E300D00967E7D /* bottle.png */; };
 		16787347184E300D00967E7D /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 16787345184E300D00967E7D /* play.png */; };
@@ -33,11 +32,8 @@
 		1678734B184E33A300967E7D /* poo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1678734A184E33A300967E7D /* poo.png */; };
 		1678734D184E379E00967E7D /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 1678734C184E379E00967E7D /* home.png */; };
 		1678734F184E37FD00967E7D /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 1678734E184E37FD00967E7D /* history.png */; };
-		167DBF9D184F87F600896772 /* gandom-wallpaper-1920x1200.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 167DBF9C184F87F600896772 /* gandom-wallpaper-1920x1200.jpg */; };
-		16867D481850D581004B0CB9 /* GKAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 16867D471850D581004B0CB9 /* GKAction.m */; };
-		16867D4B1850D581004B0CB9 /* GKBaby.m in Sources */ = {isa = PBXBuildFile; fileRef = 16867D4A1850D581004B0CB9 /* GKBaby.m */; };
 		16AA3E50184CCB0600740CFC /* GKBabyRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AA3E4F184CCB0600740CFC /* GKBabyRepo.m */; };
-		16EE013E184CDA1C00923E59 /* GKActionEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EE013D184CDA1C00923E59 /* GKActionEndViewController.m */; };
+		16B16D021854CB3D004610BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B16D011854CB3D004610BA /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +48,13 @@
 
 /* Begin PBXFileReference section */
 		161E9B02184CCCBE008314CD /* GentleKare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GentleKare.xcdatamodel; sourceTree = "<group>"; };
+		1646DD601852E47D00658375 /* GentleKare 1.3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GentleKare 1.3.xcdatamodel"; sourceTree = "<group>"; };
+		1646DD611852E50100658375 /* GKAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAction.h; sourceTree = "<group>"; };
+		1646DD621852E50100658375 /* GKAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAction.m; sourceTree = "<group>"; };
+		1646DD641852E50200658375 /* GKBaby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBaby.h; sourceTree = "<group>"; };
+		1646DD651852E50200658375 /* GKBaby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBaby.m; sourceTree = "<group>"; };
+		1646DD671854C64300658375 /* GKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKButton.h; sourceTree = "<group>"; };
+		1646DD681854C64300658375 /* GKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKButton.m; sourceTree = "<group>"; };
 		1663274D184CC55900048D7E /* GentleKare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GentleKare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16632750184CC55900048D7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		16632752184CC55900048D7E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -68,17 +71,10 @@
 		16632771184CC55A00048D7E /* GentleKareTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GentleKareTests-Info.plist"; sourceTree = "<group>"; };
 		16632773184CC55A00048D7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		16632775184CC55A00048D7E /* GentleKareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GentleKareTests.m; sourceTree = "<group>"; };
-		16632788184CC71000048D7E /* GKActionStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKActionStartViewController.h; sourceTree = "<group>"; };
-		16632789184CC71000048D7E /* GKActionStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKActionStartViewController.m; sourceTree = "<group>"; };
-		1663278A184CC71000048D7E /* GKOverallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKOverallViewController.h; sourceTree = "<group>"; };
-		1663278B184CC71000048D7E /* GKOverallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKOverallViewController.m; sourceTree = "<group>"; };
 		1663278E184CC71900048D7E /* GKType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKType.h; sourceTree = "<group>"; };
 		1663278F184CC72700048D7E /* GKBabySitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBabySitter.h; sourceTree = "<group>"; };
 		16632790184CC72700048D7E /* GKBabySitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBabySitter.m; sourceTree = "<group>"; };
 		16632792184CC7A300048D7E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		16632794184CC7D600048D7E /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
-		1678733C184DFBF500967E7D /* GKHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKHistoryViewController.h; sourceTree = "<group>"; };
-		1678733D184DFBF500967E7D /* GKHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKHistoryViewController.m; sourceTree = "<group>"; };
 		16787340184DFF4700967E7D /* GKUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUtil.h; sourceTree = "<group>"; };
 		16787341184DFF4800967E7D /* GKUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUtil.m; sourceTree = "<group>"; };
 		16787344184E300D00967E7D /* bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle.png; sourceTree = "<group>"; };
@@ -87,18 +83,11 @@
 		1678734A184E33A300967E7D /* poo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poo.png; sourceTree = "<group>"; };
 		1678734C184E379E00967E7D /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		1678734E184E37FD00967E7D /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
-		167DBF9C184F87F600896772 /* gandom-wallpaper-1920x1200.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "gandom-wallpaper-1920x1200.jpg"; sourceTree = "<group>"; };
-		16867D381850D3FE004B0CB9 /* GentleKare 1.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GentleKare 1.1.xcdatamodel"; sourceTree = "<group>"; };
-		16867D451850D537004B0CB9 /* GentleKare 1.2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GentleKare 1.2.xcdatamodel"; sourceTree = "<group>"; };
-		16867D461850D581004B0CB9 /* GKAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAction.h; sourceTree = "<group>"; };
-		16867D471850D581004B0CB9 /* GKAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAction.m; sourceTree = "<group>"; };
-		16867D491850D581004B0CB9 /* GKBaby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBaby.h; sourceTree = "<group>"; };
-		16867D4A1850D581004B0CB9 /* GKBaby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBaby.m; sourceTree = "<group>"; };
+		16867D381850D3FE004B0CB9 /* GentleKare 1.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GentleKare 1.1.xcdatamodel"; sourceTree = "<group>"; };
+		16867D451850D537004B0CB9 /* GentleKare 1.2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GentleKare 1.2.xcdatamodel"; sourceTree = "<group>"; };
 		16AA3E4E184CCB0600740CFC /* GKBabyRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBabyRepo.h; sourceTree = "<group>"; };
 		16AA3E4F184CCB0600740CFC /* GKBabyRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBabyRepo.m; sourceTree = "<group>"; };
-		16EE013C184CDA1C00923E59 /* GKActionEndViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKActionEndViewController.h; sourceTree = "<group>"; };
-		16EE013D184CDA1C00923E59 /* GKActionEndViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKActionEndViewController.m; sourceTree = "<group>"; };
-		16EE0148184CE75000923E59 /* GKActionConfirmDelete.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKActionConfirmDelete.h; sourceTree = "<group>"; };
+		16B16D011854CB3D004610BA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,16 +205,9 @@
 		16632780184CC6D000048D7E /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				16632794184CC7D600048D7E /* MainStoryboard.storyboard */,
-				16632788184CC71000048D7E /* GKActionStartViewController.h */,
-				16632789184CC71000048D7E /* GKActionStartViewController.m */,
-				1663278A184CC71000048D7E /* GKOverallViewController.h */,
-				1663278B184CC71000048D7E /* GKOverallViewController.m */,
-				16EE013C184CDA1C00923E59 /* GKActionEndViewController.h */,
-				16EE013D184CDA1C00923E59 /* GKActionEndViewController.m */,
-				16EE0148184CE75000923E59 /* GKActionConfirmDelete.h */,
-				1678733C184DFBF500967E7D /* GKHistoryViewController.h */,
-				1678733D184DFBF500967E7D /* GKHistoryViewController.m */,
+				1646DD671854C64300658375 /* GKButton.h */,
+				1646DD681854C64300658375 /* GKButton.m */,
+				16B16D011854CB3D004610BA /* Main.storyboard */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -233,11 +215,11 @@
 		16632781184CC6D700048D7E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				16867D461850D581004B0CB9 /* GKAction.h */,
-				16867D491850D581004B0CB9 /* GKBaby.h */,
-				16867D4A1850D581004B0CB9 /* GKBaby.m */,
-				16867D471850D581004B0CB9 /* GKAction.m */,
 				161E9B01184CCCBE008314CD /* GentleKare.xcdatamodeld */,
+				1646DD611852E50100658375 /* GKAction.h */,
+				1646DD621852E50100658375 /* GKAction.m */,
+				1646DD641852E50200658375 /* GKBaby.h */,
+				1646DD651852E50200658375 /* GKBaby.m */,
 				1663278E184CC71900048D7E /* GKType.h */,
 			);
 			name = Model;
@@ -268,7 +250,6 @@
 		167DBF9B184F87F600896772 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				167DBF9C184F87F600896772 /* gandom-wallpaper-1920x1200.jpg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -361,10 +342,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				167DBF9D184F87F600896772 /* gandom-wallpaper-1920x1200.jpg in Resources */,
+				16B16D021854CB3D004610BA /* Main.storyboard in Resources */,
 				1678734F184E37FD00967E7D /* history.png in Resources */,
 				1678734B184E33A300967E7D /* poo.png in Resources */,
-				16632795184CC7D600048D7E /* MainStoryboard.storyboard in Resources */,
 				16787349184E31C700967E7D /* sleep.png in Resources */,
 				16787347184E300D00967E7D /* play.png in Resources */,
 				1678734D184E379E00967E7D /* home.png in Resources */,
@@ -389,16 +369,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1663278D184CC71000048D7E /* GKOverallViewController.m in Sources */,
-				16867D481850D581004B0CB9 /* GKAction.m in Sources */,
+				1646DD631852E50100658375 /* GKAction.m in Sources */,
 				16632761184CC55A00048D7E /* GKAppDelegate.m in Sources */,
-				16867D4B1850D581004B0CB9 /* GKBaby.m in Sources */,
-				1663278C184CC71000048D7E /* GKActionStartViewController.m in Sources */,
+				1646DD691854C64300658375 /* GKButton.m in Sources */,
+				1646DD661852E50200658375 /* GKBaby.m in Sources */,
 				161E9B03184CCCBE008314CD /* GentleKare.xcdatamodeld in Sources */,
 				1663275D184CC55A00048D7E /* main.m in Sources */,
 				16AA3E50184CCB0600740CFC /* GKBabyRepo.m in Sources */,
-				16EE013E184CDA1C00923E59 /* GKActionEndViewController.m in Sources */,
-				1678733E184DFBF500967E7D /* GKHistoryViewController.m in Sources */,
 				16632791184CC72700048D7E /* GKBabySitter.m in Sources */,
 				16787342184DFF4800967E7D /* GKUtil.m in Sources */,
 			);
@@ -526,7 +503,7 @@
 				INFOPLIST_FILE = "GentleKare/GentleKare-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "EAEEF5DD-3341-4A7F-8C2C-F0DC20C61F5E";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -543,7 +520,7 @@
 				INFOPLIST_FILE = "GentleKare/GentleKare-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "EAEEF5DD-3341-4A7F-8C2C-F0DC20C61F5E";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -626,11 +603,12 @@
 		161E9B01184CCCBE008314CD /* GentleKare.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				1646DD601852E47D00658375 /* GentleKare 1.3.xcdatamodel */,
 				16867D451850D537004B0CB9 /* GentleKare 1.2.xcdatamodel */,
 				16867D381850D3FE004B0CB9 /* GentleKare 1.1.xcdatamodel */,
 				161E9B02184CCCBE008314CD /* GentleKare.xcdatamodel */,
 			);
-			currentVersion = 16867D451850D537004B0CB9 /* GentleKare 1.2.xcdatamodel */;
+			currentVersion = 1646DD601852E47D00658375 /* GentleKare 1.3.xcdatamodel */;
 			path = GentleKare.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

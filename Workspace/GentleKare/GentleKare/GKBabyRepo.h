@@ -17,10 +17,14 @@
     NSPersistentStoreCoordinator *_coord;
 }
 
-+(GKBaby*) findOrCreateBabyForName:(NSString*) name;
++(GKBabyRepo*) inst;
 
-+(void) save;
+-(GKBaby*) findOrCreateBabyForName:(NSString*) name;
 
-+(GKAction*) createNewAction;
+-(NSArray*) fetchActionsAfterTime: (NSDate*) time;
+
+-(void) save;
+
+-(GKAction*) createNewAction;
 
 @end

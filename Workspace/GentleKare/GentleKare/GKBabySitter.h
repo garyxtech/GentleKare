@@ -10,32 +10,30 @@
 
 @interface GKBabySitter : NSObject
 {
-    GKBaby *_baby;
-    int _currGroupCount;
-    NSMutableArray *_arArActionByGroupIdx;
-    NSArray* _arDaysSorted;
 }
 
-+(GKBaby*) baby;
++(GKBabySitter*) inst;
 
-+(GK_E_Action) getCurrBabyAction;
+-(GKBaby*) baby;
 
-+(NSString*) getCurrBabyActionDescription;
+-(GK_E_Action) getCurrBabyAction;
 
-+(NSString*) getActionDescription:(GK_E_Action)action;
+-(NSString*) getCurrBabyActionDescription;
 
-+(void) action:(GK_E_Action) action at:(NSDate*) startTime;
+-(NSString*) getActionDescription:(GK_E_Action)action;
 
-+(void) finishAt:(NSDate*) endTime;
+-(void) action:(GK_E_Action) action at:(NSDate*) startTime;
 
-+(bool) isLastActionInProgress;
+-(void) finishAt:(NSDate*) endTime;
 
-+(int) getGroupCount;
+-(bool) isLastActionInProgress;
 
-+(NSArray *) getActionForGroupIdx:(NSInteger) idx;
+-(int) getGroupCount;
 
-+(NSObject *) getGroupCompareKeyForIdx:(NSInteger) idx;
+-(NSArray *) getActionForGroupIdx:(NSInteger) idx;
 
-+(GKAction *) getLastUnfinishedAction;
+-(NSObject *) getGroupCompareKeyForIdx:(NSInteger) idx;
+
+-(GKAction *) getLastUnfinishedAction;
 
 @end

@@ -48,10 +48,10 @@ static GKBabyRepo *_instance;
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
-+(GKBaby *)findOrCreateBabyForName:(NSString *)name{
-    GKBaby* baby = [[GKBabyRepo inst] findBabyByName:name];
+-(GKBaby *)findOrCreateBabyForName:(NSString *)name{
+    GKBaby* baby = [self findBabyByName:name];
     if(baby==nil){
-        baby = [[GKBabyRepo inst] createBabyByName:name];
+        baby = [self createBabyByName:name];
     }
     if(baby.birthday==nil){
         baby.birthday = [NSDate date];
@@ -78,6 +78,8 @@ static GKBabyRepo *_instance;
     return ret;
 }
 
+
+
 -(GKBaby*) createBabyByName:(NSString*) name{
     GKBaby* baby = [NSEntityDescription insertNewObjectForEntityForName:@"GKBaby" inManagedObjectContext:_context];
     baby.name = name;
@@ -86,21 +88,16 @@ static GKBabyRepo *_instance;
     return baby;
 }
 
-+(void)save{
-    [[GKBabyRepo inst] _save];
+-(NSArray *)fetchActionsAfterTime:(NSDate *)time{
+    return nil;
 }
 
--(void) _save{
+-(void)save{
     NSError *error;
     [_context save:&error];
 }
 
-+(GKAction *)createNewAction{
-    GKAction *action = [[self inst] _newAction];
-    return action;
-}
-
--(GKAction *)_newAction{
+-(GKAction *)createNewAction{
     return [NSEntityDescription insertNewObjectForEntityForName:@"GKAction" inManagedObjectContext:_context];
 }
 
