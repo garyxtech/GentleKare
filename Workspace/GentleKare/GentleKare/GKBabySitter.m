@@ -209,6 +209,13 @@ static GKBabySitter *instance;
     return [_arDaysSorted objectAtIndex:idx];
 }
 
+-(void)disposeNow{
+    
+}
+
+-(void)cancelLastAction{
+    
+}
 
 
 @end

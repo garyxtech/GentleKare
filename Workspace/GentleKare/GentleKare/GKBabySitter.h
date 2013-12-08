@@ -26,6 +26,8 @@
 
 -(void) finishAt:(NSDate*) endTime;
 
+-(void) cancelLastAction;
+
 -(bool) isLastActionInProgress;
 
 -(int) getGroupCount;
@@ -35,5 +37,7 @@
 -(NSObject *) getGroupCompareKeyForIdx:(NSInteger) idx;
 
 -(GKAction *) getLastUnfinishedAction;
+
+-(void) disposeNow;
 
 @end

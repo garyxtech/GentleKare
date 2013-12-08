@@ -90,4 +90,13 @@ static const NSDateFormatter *DATEFORMATTER_MONTHDAYTIME;
     return dateOnly;
 }
 
++(NSDateComponents *)getDateCompForDate:(NSDate *)toDate compareTo:(NSDate *)fromDate{
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *components = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit
+                                               fromDate:fromDate
+                                                 toDate:toDate
+                                                options:0];
+    return components;
+}
+
 @end

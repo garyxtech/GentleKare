@@ -33,4 +33,6 @@
 
 +(NSDate*) stripTime: (NSDate*) date;
 
++(NSDateComponents*) getDateCompForDate:(NSDate*) toDate compareTo:(NSDate*) fromDate;
+
 @end

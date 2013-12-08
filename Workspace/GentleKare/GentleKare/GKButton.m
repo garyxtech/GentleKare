@@ -28,9 +28,9 @@
 }
 
 -(void) loadStyle{
-    self.layer.cornerRadius = 8;
-    self.layer.borderWidth = 1;
-    self.layer.borderColor = [UIColor whiteColor].CGColor;
+//    self.layer.cornerRadius = 8;
+//    self.layer.borderWidth = 1;
+//    self.layer.borderColor = [UIColor blueColor].CGColor;
 }
 
 /*
