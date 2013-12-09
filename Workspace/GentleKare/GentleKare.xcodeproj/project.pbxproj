@@ -10,7 +10,7 @@
 		161E9B03184CCCBE008314CD /* GentleKare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 161E9B01184CCCBE008314CD /* GentleKare.xcdatamodeld */; };
 		1646DD631852E50100658375 /* GKAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1646DD621852E50100658375 /* GKAction.m */; };
 		1646DD661852E50200658375 /* GKBaby.m in Sources */ = {isa = PBXBuildFile; fileRef = 1646DD651852E50200658375 /* GKBaby.m */; };
-		1646DD691854C64300658375 /* GKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1646DD681854C64300658375 /* GKButton.m */; };
+		1646DD691854C64300658375 /* GKUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1646DD681854C64300658375 /* GKUIButton.m */; };
 		16632751184CC55900048D7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632750184CC55900048D7E /* Foundation.framework */; };
 		16632753184CC55900048D7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632752184CC55900048D7E /* CoreGraphics.framework */; };
 		16632755184CC55900048D7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632754184CC55900048D7E /* UIKit.framework */; };
@@ -25,6 +25,8 @@
 		16632776184CC55A00048D7E /* GentleKareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16632775184CC55A00048D7E /* GentleKareTests.m */; };
 		16632791184CC72700048D7E /* GKBabySitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 16632790184CC72700048D7E /* GKBabySitter.m */; };
 		16632793184CC7A300048D7E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632792184CC7A300048D7E /* CoreData.framework */; };
+		166857BF1855E21D00A45791 /* GKUIActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 166857BE1855E21D00A45791 /* GKUIActionButton.m */; };
+		166857C21855E58200A45791 /* GKHisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 166857C11855E58200A45791 /* GKHisViewController.m */; };
 		16787342184DFF4800967E7D /* GKUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 16787341184DFF4800967E7D /* GKUtil.m */; };
 		16787346184E300D00967E7D /* bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 16787344184E300D00967E7D /* bottle.png */; };
 		16787347184E300D00967E7D /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 16787345184E300D00967E7D /* play.png */; };
@@ -55,8 +57,8 @@
 		1646DD621852E50100658375 /* GKAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAction.m; sourceTree = "<group>"; };
 		1646DD641852E50200658375 /* GKBaby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBaby.h; sourceTree = "<group>"; };
 		1646DD651852E50200658375 /* GKBaby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBaby.m; sourceTree = "<group>"; };
-		1646DD671854C64300658375 /* GKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKButton.h; sourceTree = "<group>"; };
-		1646DD681854C64300658375 /* GKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKButton.m; sourceTree = "<group>"; };
+		1646DD671854C64300658375 /* GKUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUIButton.h; sourceTree = "<group>"; };
+		1646DD681854C64300658375 /* GKUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUIButton.m; sourceTree = "<group>"; };
 		1663274D184CC55900048D7E /* GentleKare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GentleKare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16632750184CC55900048D7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		16632752184CC55900048D7E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -77,6 +79,10 @@
 		1663278F184CC72700048D7E /* GKBabySitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBabySitter.h; sourceTree = "<group>"; };
 		16632790184CC72700048D7E /* GKBabySitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBabySitter.m; sourceTree = "<group>"; };
 		16632792184CC7A300048D7E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		166857BD1855E21D00A45791 /* GKUIActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUIActionButton.h; sourceTree = "<group>"; };
+		166857BE1855E21D00A45791 /* GKUIActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUIActionButton.m; sourceTree = "<group>"; };
+		166857C01855E58200A45791 /* GKHisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKHisViewController.h; sourceTree = "<group>"; };
+		166857C11855E58200A45791 /* GKHisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKHisViewController.m; sourceTree = "<group>"; };
 		16787340184DFF4700967E7D /* GKUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUtil.h; sourceTree = "<group>"; };
 		16787341184DFF4800967E7D /* GKUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUtil.m; sourceTree = "<group>"; };
 		16787344184E300D00967E7D /* bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle.png; sourceTree = "<group>"; };
@@ -211,13 +217,14 @@
 		16632780184CC6D000048D7E /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				1646DD671854C64300658375 /* GKButton.h */,
-				1646DD681854C64300658375 /* GKButton.m */,
+				166857BB1855E1BD00A45791 /* Components */,
 				16B16D471854CF72004610BA /* Main.storyboard */,
 				16B16D491854D479004610BA /* GKOverviewViewController.h */,
 				16B16D4A1854D479004610BA /* GKOverviewViewController.m */,
 				16B16D4C1854D585004610BA /* GKActionStartViewController.h */,
 				16B16D4D1854D585004610BA /* GKActionStartViewController.m */,
+				166857C01855E58200A45791 /* GKHisViewController.h */,
+				166857C11855E58200A45791 /* GKHisViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -233,6 +240,17 @@
 				1663278E184CC71900048D7E /* GKType.h */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		166857BB1855E1BD00A45791 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1646DD671854C64300658375 /* GKUIButton.h */,
+				1646DD681854C64300658375 /* GKUIButton.m */,
+				166857BD1855E21D00A45791 /* GKUIActionButton.h */,
+				166857BE1855E21D00A45791 /* GKUIActionButton.m */,
+			);
+			name = Components;
 			sourceTree = "<group>";
 		};
 		1678733F184DFF2B00967E7D /* Util */ = {
@@ -381,11 +399,13 @@
 			files = (
 				1646DD631852E50100658375 /* GKAction.m in Sources */,
 				16632761184CC55A00048D7E /* GKAppDelegate.m in Sources */,
-				1646DD691854C64300658375 /* GKButton.m in Sources */,
+				1646DD691854C64300658375 /* GKUIButton.m in Sources */,
 				16B16D4E1854D585004610BA /* GKActionStartViewController.m in Sources */,
 				1646DD661852E50200658375 /* GKBaby.m in Sources */,
 				161E9B03184CCCBE008314CD /* GentleKare.xcdatamodeld in Sources */,
 				16B16D4B1854D479004610BA /* GKOverviewViewController.m in Sources */,
+				166857BF1855E21D00A45791 /* GKUIActionButton.m in Sources */,
+				166857C21855E58200A45791 /* GKHisViewController.m in Sources */,
 				1663275D184CC55A00048D7E /* main.m in Sources */,
 				16AA3E50184CCB0600740CFC /* GKBabyRepo.m in Sources */,
 				16632791184CC72700048D7E /* GKBabySitter.m in Sources */,

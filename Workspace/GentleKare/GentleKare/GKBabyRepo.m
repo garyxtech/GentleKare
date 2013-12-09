@@ -8,7 +8,12 @@
 
 #import "GKBabyRepo.h"
 
-@implementation GKBabyRepo
+@implementation GKBabyRepo{
+    NSManagedObjectContext* _context;
+    NSManagedObjectModel* _model;
+    NSEntityDescription* _entityDescGKBaby;
+    NSEntityDescription* _entityDescGKAction;
+}
 
 static GKBabyRepo *_instance;
 
@@ -25,21 +30,34 @@ static GKBabyRepo *_instance;
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"GentleKare" withExtension:@"momd"];
     _model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"GentleKare.sqlite"];
+    
+    NSManagedObjectContext* ctx;
+    [self initContext:&ctx forPath:@"GentleKare.sqlite"];
+    _context = ctx;
+    
+    _entityDescGKBaby = [NSEntityDescription entityForName:@"GKBaby" inManagedObjectContext:_context];
+    _entityDescGKAction = [NSEntityDescription entityForName:@"GKAction" inManagedObjectContext:_context];
+    
+}
+
+-(void) initContext:(NSManagedObjectContext**) ctx forPath:(NSString*) path{
+    
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:path];
     
     NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
                              [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
                              [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
     
     NSError *error = nil;
-    _coord = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:_model];
-    if (![_coord addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
+    NSPersistentStoreCoordinator* coord = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:_model];
+    if (![coord addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
     
-    _context = [[NSManagedObjectContext alloc] init];
-    [_context setPersistentStoreCoordinator:_coord];
+    *ctx = [[NSManagedObjectContext alloc] init];
+    
+    [*ctx setPersistentStoreCoordinator:coord];
     
 }
 
@@ -78,8 +96,6 @@ static GKBabyRepo *_instance;
     return ret;
 }
 
-
-
 -(GKBaby*) createBabyByName:(NSString*) name{
     GKBaby* baby = [NSEntityDescription insertNewObjectForEntityForName:@"GKBaby" inManagedObjectContext:_context];
     baby.name = name;
@@ -89,7 +105,10 @@ static GKBabyRepo *_instance;
 }
 
 -(NSArray *)fetchActionsAfterTime:(NSDate *)time{
-    return nil;
+    NSFetchRequest* fetchActionAfterTime = [_model fetchRequestFromTemplateWithName:@"FetchAllActions" substitutionVariables:@{@"TIME": time}];
+    NSError *error;
+    NSArray *result = [_context executeFetchRequest:fetchActionAfterTime error:&error];
+    return result;
 }
 
 -(void)save{
@@ -97,8 +116,15 @@ static GKBabyRepo *_instance;
     [_context save:&error];
 }
 
--(GKAction *)createNewAction{
-    return [NSEntityDescription insertNewObjectForEntityForName:@"GKAction" inManagedObjectContext:_context];
+-(GKAction *)getNewAction{
+    GKAction* action = [[GKAction alloc] initWithEntity:_entityDescGKAction insertIntoManagedObjectContext:nil];
+    return action;
 }
+
+-(void)saveAction:(GKAction *)action{
+    [_context insertObject:action];
+    [self save];
+}
+
 
 @end

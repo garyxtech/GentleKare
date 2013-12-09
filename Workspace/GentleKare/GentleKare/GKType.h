@@ -15,3 +15,9 @@ typedef NS_ENUM(int, GK_E_Action){
     GK_E_Action_SLEEP,
     GK_E_Action_DISPOSE
 };
+
+typedef NS_ENUM (int, GK_E_PERIOD){
+    GK_E_PERIOD_LAST24HOURS=0,
+    GK_E_PERIOD_LAST31DAYS,
+    GK_E_PERIOD_LAST12MONTHS
+};

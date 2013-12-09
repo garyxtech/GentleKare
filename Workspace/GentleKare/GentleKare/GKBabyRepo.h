@@ -11,10 +11,6 @@
 
 @interface GKBabyRepo : NSObject
 {
-    @private
-    NSManagedObjectContext *_context;
-    NSManagedObjectModel *_model;
-    NSPersistentStoreCoordinator *_coord;
 }
 
 +(GKBabyRepo*) inst;
@@ -23,8 +19,8 @@
 
 -(NSArray*) fetchActionsAfterTime: (NSDate*) time;
 
--(void) save;
+-(GKAction*) getNewAction;
 
--(GKAction*) createNewAction;
+-(void) saveAction:(GKAction*)action;
 
 @end

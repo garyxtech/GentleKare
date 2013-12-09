@@ -17,6 +17,8 @@
     int _currGroupCount;
     NSMutableArray *_arArActionByGroupIdx;
     NSArray* _arDaysSorted;
+    GK_E_PERIOD _periodType;
+    GKAction* _actionOnHold;
 }
 
 static GKBabySitter *instance;
@@ -38,14 +40,11 @@ static GKBabySitter *instance;
 }
 
 -(void) initData{
+    _periodType = GK_E_PERIOD_LAST24HOURS;
     _baby = [_repo findOrCreateBabyForName:@"川川"];
-    [self updateCurrAction];
+    _recentActions = [[NSMutableArray alloc] init];
+    [self updateCurrAction];    
     [self updateActionGroup];
-    [self save];
-}
-
--(void) save{
-    [_repo save];
 }
 
 -(void) updateCurrAction{
@@ -66,13 +65,39 @@ static GKBabySitter *instance;
     _baby.currAction = [NSNumber numberWithInt:foundActionType];
 }
 
+-(NSDate*) getDateSinceSetPeriod{
+    NSCalendar* cal = [NSCalendar currentCalendar];
+    NSDate* now = [NSDate date];
+    NSDateComponents* comp = [[NSDateComponents alloc] init];
+    switch (_periodType) {
+        case GK_E_PERIOD_LAST24HOURS:
+            [comp setHour:24];
+            break;
+        case GK_E_PERIOD_LAST31DAYS:
+            [comp setDay:31];
+            break;
+        case GK_E_PERIOD_LAST12MONTHS:
+            [comp setMonth:12];
+            break;
+        default:
+            return nil;
+    }
+    return [cal dateByAddingComponents:comp toDate:now options:NSCalendarWrapComponents];
+}
+
 -(void) updateActionGroup{
+    
+    NSDate* boundDate = [self getDateSinceSetPeriod];
+    NSArray* foundActions = [_repo fetchActionsAfterTime:boundDate];
+    [_recentActions removeAllObjects];
+    [_recentActions addObjectsFromArray:foundActions];
     
     _arArActionByGroupIdx = [[NSMutableArray alloc] init];
     _arDaysSorted = nil;
     
     NSMutableArray* arDays = [[NSMutableArray alloc] init];
     for(GKAction *curr in _recentActions){
+        
         NSDate* keyDate = [self keyDate:curr];
         if(keyDate == nil){
             continue;
@@ -129,22 +154,18 @@ static GKBabySitter *instance;
 
 -(void)action:(GK_E_Action)action at:(NSDate *)startTime{
     [self baby].currAction = [NSNumber numberWithInt:action];
-    GKAction *newAction = [_repo createNewAction];
-    newAction.actionType = [NSNumber numberWithInt:action];
-    newAction.startTime = startTime;
+    _actionOnHold = [_repo getNewAction];
+    _actionOnHold.actionType = [NSNumber numberWithInt:action];
+    _actionOnHold.startTime = startTime;
     if(action == GK_E_Action_DISPOSE){
-        newAction.endTime = startTime;
+        _actionOnHold.endTime = startTime;
     }
-    [self updateCurrAction];
-    [self save];
-    [self updateActionGroup];
 }
 
 -(void)finishAt:(NSDate *)endTime{
-    GKAction *lastAction = [self getLastUnfinishedAction];
-    lastAction.endTime = endTime;
-    [self updateCurrAction];
-    [self save];
+    _actionOnHold.endTime = endTime;
+    [_repo saveAction:_actionOnHold];
+    _actionOnHold = nil;
     [self updateActionGroup];
 }
 
@@ -191,10 +212,6 @@ static GKBabySitter *instance;
 }
 
 -(NSArray *)getActionForGroupIdx:(NSInteger)idx{
-    return [self _getActionForGroupIdx:idx];
-}
-
--(NSArray *)_getActionForGroupIdx:(NSInteger)idx{
     if([_arArActionByGroupIdx count] > idx){
         return [_arArActionByGroupIdx objectAtIndex:idx];
     }

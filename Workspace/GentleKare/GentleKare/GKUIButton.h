@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GKButton : UIButton
+@interface GKUIButton : UIButton
 
 @end
