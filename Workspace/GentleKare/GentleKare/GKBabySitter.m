@@ -161,9 +161,6 @@ static GKBabySitter *instance;
     _actionOnHold = [_repo getNewAction];
     _actionOnHold.actionType = [NSNumber numberWithInt:action];
     _actionOnHold.startTime = startTime;
-    if(action == GK_E_Action_DISPOSE){
-        _actionOnHold.endTime = startTime;
-    }
 }
 
 -(void)finishAt:(NSDate *)endTime{
@@ -231,7 +228,13 @@ static GKBabySitter *instance;
 }
 
 -(void)disposeNow{
-    
+    NSDate* now = [NSDate date];
+    GKAction* disposeAction = [_repo getNewAction];
+    disposeAction.actionType = [NSNumber numberWithInt:GK_E_Action_DISPOSE];
+    disposeAction.startTime = now;
+    disposeAction.endTime = now;
+    [_repo saveAction:disposeAction];
+    [self updateActionGroup];
 }
 
 -(void)cancelLastAction{

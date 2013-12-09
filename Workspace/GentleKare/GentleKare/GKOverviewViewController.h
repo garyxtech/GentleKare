@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnPlay;
 @property (weak, nonatomic) IBOutlet UIButton *btnSleep;
 @property (weak, nonatomic) IBOutlet UIButton *btnDispose;
+- (IBAction)triggerDispose:(id)sender;
 
 @end

@@ -58,4 +58,7 @@
     }
 }
 
+- (IBAction)triggerDispose:(id)sender {
+    [[GKBabySitter inst] disposeNow];
+}
 @end

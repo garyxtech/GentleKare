@@ -86,6 +86,9 @@
                                 <state key="normal" title="臭一下">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="triggerDispose:" destination="neT-H3-oPw" eventType="touchUpInside" id="7Vh-lN-gDD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -389,7 +392,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLd-hW-S22">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLd-hW-S22">
                                 <rect key="frame" x="0.0" y="399" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -400,7 +403,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <action selector="confirmDetail:" destination="QIj-Us-OpX" eventType="touchUpInside" id="Kmm-TQ-DMF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWv-Di-dD0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWv-Di-dD0">
                                 <rect key="frame" x="91" y="453" width="139" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="取消">
@@ -433,6 +436,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SWv-Di-dD0" secondAttribute="trailing" constant="90" id="2D3-k8-feq"/>
+                            <constraint firstItem="SWv-Di-dD0" firstAttribute="leading" secondItem="efM-Yu-OJJ" secondAttribute="leading" constant="91" id="AqY-bL-bDS"/>
+                            <constraint firstItem="jLd-hW-S22" firstAttribute="centerX" secondItem="SWv-Di-dD0" secondAttribute="centerX" constant="-0.5" id="QDn-Nf-Xnl"/>
+                            <constraint firstItem="ENa-c7-eOv" firstAttribute="top" secondItem="jLd-hW-S22" secondAttribute="bottom" constant="90" id="ect-ua-22U"/>
+                            <constraint firstItem="ENa-c7-eOv" firstAttribute="top" secondItem="SWv-Di-dD0" secondAttribute="bottom" constant="36" id="icZ-lI-ajb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0PM-RG-sRD"/>
                     <connections>
