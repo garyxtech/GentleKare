@@ -15,11 +15,13 @@
 
 +(GKBabyRepo*) inst;
 
--(GKBaby*) findOrCreateBabyForName:(NSString*) name;
+-(GKBaby*) findOrCreateBaby;
 
 -(NSArray*) fetchActionsAfterTime: (NSDate*) time;
 
 -(GKAction*) getNewAction;
+
+-(void) save;
 
 -(void) saveAction:(GKAction*)action;
 

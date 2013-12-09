@@ -66,16 +66,10 @@ static GKBabyRepo *_instance;
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
--(GKBaby *)findOrCreateBabyForName:(NSString *)name{
-    GKBaby* baby = [self findBabyByName:name];
+-(GKBaby *)findOrCreateBaby{
+    GKBaby* baby = [self findFirstBaby];
     if(baby==nil){
-        baby = [self createBabyByName:name];
-    }
-    if(baby.birthday==nil){
-        baby.birthday = [NSDate date];
-    }
-    if(baby.height == nil){
-        baby.height = [NSNumber numberWithInt:100];
+        baby = [self createBabyByName:@"宝宝"];
     }
     return baby;
 }
@@ -105,7 +99,7 @@ static GKBabyRepo *_instance;
 }
 
 -(NSArray *)fetchActionsAfterTime:(NSDate *)time{
-    NSFetchRequest* fetchActionAfterTime = [_model fetchRequestFromTemplateWithName:@"FetchAllActions" substitutionVariables:@{@"TIME": time}];
+    NSFetchRequest* fetchActionAfterTime = [_model fetchRequestFromTemplateWithName:@"FetchAcitonAfterTime" substitutionVariables:@{@"TIME": time}];
     NSError *error;
     NSArray *result = [_context executeFetchRequest:fetchActionAfterTime error:&error];
     return result;

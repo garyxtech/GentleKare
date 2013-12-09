@@ -41,10 +41,14 @@ static GKBabySitter *instance;
 
 -(void) initData{
     _periodType = GK_E_PERIOD_LAST24HOURS;
-    _baby = [_repo findOrCreateBabyForName:@"川川"];
+    [self reloadBabyDetail];
     _recentActions = [[NSMutableArray alloc] init];
     [self updateCurrAction];    
     [self updateActionGroup];
+}
+
+-(void) reloadBabyDetail{
+    _baby = [_repo findOrCreateBaby];
 }
 
 -(void) updateCurrAction{
@@ -71,18 +75,18 @@ static GKBabySitter *instance;
     NSDateComponents* comp = [[NSDateComponents alloc] init];
     switch (_periodType) {
         case GK_E_PERIOD_LAST24HOURS:
-            [comp setHour:24];
+            [comp setHour:-24];
             break;
         case GK_E_PERIOD_LAST31DAYS:
-            [comp setDay:31];
+            [comp setDay:-31];
             break;
         case GK_E_PERIOD_LAST12MONTHS:
-            [comp setMonth:12];
+            [comp setMonth:-12];
             break;
         default:
             return nil;
     }
-    return [cal dateByAddingComponents:comp toDate:now options:NSCalendarWrapComponents];
+    return [cal dateByAddingComponents:comp toDate:now options:0];
 }
 
 -(void) updateActionGroup{
@@ -232,6 +236,10 @@ static GKBabySitter *instance;
 
 -(void)cancelLastAction{
     
+}
+
+-(void) save{
+    [[GKBabyRepo inst] save];
 }
 
 

@@ -38,6 +38,10 @@
 
 -(GKAction *) getLastUnfinishedAction;
 
+-(void) save;
+
 -(void) disposeNow;
+
+-(void) reloadBabyDetail;
 
 @end

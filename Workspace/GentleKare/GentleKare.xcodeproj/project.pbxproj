@@ -27,6 +27,7 @@
 		16632793184CC7A300048D7E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16632792184CC7A300048D7E /* CoreData.framework */; };
 		166857BF1855E21D00A45791 /* GKUIActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 166857BE1855E21D00A45791 /* GKUIActionButton.m */; };
 		166857C21855E58200A45791 /* GKHisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 166857C11855E58200A45791 /* GKHisViewController.m */; };
+		166857C518560DE400A45791 /* GKBabyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 166857C418560DE400A45791 /* GKBabyDetailViewController.m */; };
 		16787342184DFF4800967E7D /* GKUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 16787341184DFF4800967E7D /* GKUtil.m */; };
 		16787346184E300D00967E7D /* bottle.png in Resources */ = {isa = PBXBuildFile; fileRef = 16787344184E300D00967E7D /* bottle.png */; };
 		16787347184E300D00967E7D /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 16787345184E300D00967E7D /* play.png */; };
@@ -83,6 +84,8 @@
 		166857BE1855E21D00A45791 /* GKUIActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUIActionButton.m; sourceTree = "<group>"; };
 		166857C01855E58200A45791 /* GKHisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKHisViewController.h; sourceTree = "<group>"; };
 		166857C11855E58200A45791 /* GKHisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKHisViewController.m; sourceTree = "<group>"; };
+		166857C318560DE400A45791 /* GKBabyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBabyDetailViewController.h; sourceTree = "<group>"; };
+		166857C418560DE400A45791 /* GKBabyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBabyDetailViewController.m; sourceTree = "<group>"; };
 		16787340184DFF4700967E7D /* GKUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKUtil.h; sourceTree = "<group>"; };
 		16787341184DFF4800967E7D /* GKUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKUtil.m; sourceTree = "<group>"; };
 		16787344184E300D00967E7D /* bottle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle.png; sourceTree = "<group>"; };
@@ -225,6 +228,8 @@
 				16B16D4D1854D585004610BA /* GKActionStartViewController.m */,
 				166857C01855E58200A45791 /* GKHisViewController.h */,
 				166857C11855E58200A45791 /* GKHisViewController.m */,
+				166857C318560DE400A45791 /* GKBabyDetailViewController.h */,
+				166857C418560DE400A45791 /* GKBabyDetailViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -404,6 +409,7 @@
 				1646DD661852E50200658375 /* GKBaby.m in Sources */,
 				161E9B03184CCCBE008314CD /* GentleKare.xcdatamodeld in Sources */,
 				16B16D4B1854D479004610BA /* GKOverviewViewController.m in Sources */,
+				166857C518560DE400A45791 /* GKBabyDetailViewController.m in Sources */,
 				166857BF1855E21D00A45791 /* GKUIActionButton.m in Sources */,
 				166857C21855E58200A45791 /* GKHisViewController.m in Sources */,
 				1663275D184CC55A00048D7E /* main.m in Sources */,

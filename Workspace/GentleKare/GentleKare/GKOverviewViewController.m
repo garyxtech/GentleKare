@@ -30,6 +30,10 @@
 	// Do any additional setup after loading the view.
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [self.babyName setTitle:[[GKBabySitter inst] baby].name forState:UIControlStateNormal];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -37,7 +41,9 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
     NSString *sgID = segue.identifier;
+    
     GK_E_Action actionType = GK_E_Action_IDLE;
     if([sgID isEqualToString:@"SG_MAIN_FEED"]){
         actionType = GK_E_Action_FEED;
@@ -46,7 +52,10 @@
     }else if([sgID isEqualToString:@"SG_MAIN_SLEEP"]){
         actionType = GK_E_Action_SLEEP;
     }
-    [((GKActionStartViewController*)[segue destinationViewController]) loadForAction:actionType];
+    
+    if([[segue destinationViewController] class] == [GKActionStartViewController class]){
+        [((GKActionStartViewController*)[segue destinationViewController]) loadForAction:actionType];
+    }
 }
 
 @end
