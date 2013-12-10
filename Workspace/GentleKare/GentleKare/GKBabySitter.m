@@ -40,7 +40,7 @@ static GKBabySitter *instance;
 }
 
 -(void) initData{
-    _periodType = GK_E_PERIOD_LAST24HOURS;
+    _periodType = GK_E_PERIOD_LAST31DAYS;
     [self reloadBabyDetail];
     _recentActions = [[NSMutableArray alloc] init];
     [self updateCurrAction];    
