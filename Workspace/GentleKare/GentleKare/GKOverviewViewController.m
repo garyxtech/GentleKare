@@ -8,6 +8,7 @@
 
 #import "GKOverviewViewController.h"
 #import "GKActionStartViewController.h"
+#import "GKBabyDetailViewController.h"
 
 @interface GKOverviewViewController ()
 
@@ -32,6 +33,8 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [self.babyName setTitle:[[GKBabySitter inst] baby].name forState:UIControlStateNormal];
+    UIImage* image = [UIImage imageWithData:[[GKBabySitter inst] baby].image];
+    self.imgBaby.image = image;
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,6 +58,10 @@
     
     if([[segue destinationViewController] class] == [GKActionStartViewController class]){
         [((GKActionStartViewController*)[segue destinationViewController]) loadForAction:actionType];
+    }
+    
+    if([[segue destinationViewController] class] == [GKBabyDetailViewController class]){
+        [((GKBabyDetailViewController*)[segue destinationViewController]) loadBabyDetail:[[GKBabySitter inst] baby]];
     }
 }
 

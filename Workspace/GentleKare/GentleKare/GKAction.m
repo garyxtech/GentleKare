@@ -2,7 +2,7 @@
 //  GKAction.m
 //  GentleKare
 //
-//  Created by 薛洪 on 13-12-7.
+//  Created by 薛洪 on 13-12-10.
 //  Copyright (c) 2013年 薛洪. All rights reserved.
 //
 
@@ -11,9 +11,9 @@
 
 @implementation GKAction
 
+@dynamic actionID;
 @dynamic actionType;
 @dynamic endTime;
 @dynamic startTime;
-@dynamic actionID;
 
 @end

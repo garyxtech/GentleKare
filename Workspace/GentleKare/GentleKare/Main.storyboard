@@ -90,6 +90,10 @@
                                     <action selector="triggerDispose:" destination="neT-H3-oPw" eventType="touchUpInside" id="7Vh-lN-gDD"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ePS-aM-AlJ">
+                                <rect key="frame" x="20" y="156" width="160" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -101,6 +105,7 @@
                         <outlet property="btnFeed" destination="gLp-ni-FcR" id="UhG-BB-oDh"/>
                         <outlet property="btnPlay" destination="9nI-1G-Iqj" id="FN2-2l-bWR"/>
                         <outlet property="btnSleep" destination="eFf-Hr-SvV" id="CKu-qd-7Ge"/>
+                        <outlet property="imgBaby" destination="ePS-aM-AlJ" id="zSW-bt-Ote"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8K5-pG-4oh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -606,6 +611,20 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <outlet property="delegate" destination="QIj-Us-OpX" id="bHa-gp-3QC"/>
                                 </connections>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xTG-fW-qse">
+                                <rect key="frame" x="80" y="139" width="160" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUb-qH-yDX">
+                                <rect key="frame" x="80" y="139" width="160" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickImage:" destination="QIj-Us-OpX" eventType="touchUpInside" id="4Zy-7j-4iU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -623,6 +642,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" id="0PM-RG-sRD"/>
                     <connections>
                         <outlet property="btnPickDateOK" destination="ASu-GG-G9H" id="wdO-RC-6di"/>
+                        <outlet property="imgBaby" destination="xTG-fW-qse" id="g1a-qz-03a"/>
                         <outlet property="lblBirthday" destination="NI6-G3-6rG" id="SCM-M5-MYc"/>
                         <outlet property="lblName" destination="qhR-sU-Mkc" id="6jk-ZH-F9a"/>
                         <outlet property="pkrDate" destination="YJh-Ip-dGJ" id="1O7-nG-ibh"/>
@@ -784,6 +804,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="6Hk-pt-lAn"/>
+        <segue reference="hhq-ou-Fdp"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="1.1" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13A603" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="GKAction" representedClassName="GKAction" syncable="YES">
+        <attribute name="actionID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="actionType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="endTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="GKBaby" representedClassName="GKBaby" syncable="YES">
+        <attribute name="birthday" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="currAction" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <fetchRequest name="FetchAcitonAfterTime" entity="GKAction" predicateString="endTime >= $TIME"/>
+    <fetchRequest name="FetchAcitonAfterTimeUntilMax" entity="GKAction" predicateString="endTime >= $TIME AND endTime &lt;= $TIMEMAX"/>
+    <fetchRequest name="FetchActionByActionID" entity="GKAction" predicateString="actionID == $ID"/>
+    <fetchRequest name="FetchAllActions" entity="GKAction"/>
+    <fetchRequest name="FindBabyByName" entity="GKBaby" predicateString="name == $NAME"/>
+    <fetchRequest name="FindFirstBaby" entity="GKBaby"/>
+    <elements>
+        <element name="GKAction" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="GKBaby" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>

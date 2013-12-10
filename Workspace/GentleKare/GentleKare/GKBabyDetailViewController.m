@@ -14,6 +14,8 @@
 
 @implementation GKBabyDetailViewController{
     NSDate* _pickedDate;
+    UIImagePickerController* _pkrImage;
+    GKBaby* _babyOnHold;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
@@ -26,22 +28,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.lblBirthday setInputView:self.pkrDate];
+    _pkrImage = [[UIImagePickerController alloc] init];
+}
+
+-(void)loadBabyDetail:(GKBaby*) baby{
+    _babyOnHold = baby;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    [self loadBabyDetail];
-    [self.lblBirthday setInputView:self.pkrDate];
-}
-
--(void) loadBabyDetail{
-    GKBaby* baby = [[GKBabySitter inst] baby];
-    [self.lblName setText:baby.name];
-    if(baby.birthday!=nil){
-        [self.lblBirthday setText:[GKUtil dateToStrAsDayOnly:baby.birthday]];
-        _pickedDate = baby.birthday;
-    }else{
-        [self.lblBirthday setText:@"未设定"];
-        _pickedDate = nil;
+    
+    if(_babyOnHold != nil){
+        [self.lblName setText:_babyOnHold.name];
+        if(_babyOnHold.birthday!=nil){
+            [self.lblBirthday setText:[GKUtil dateToStrAsDayOnly:_babyOnHold.birthday]];
+            _pickedDate = _babyOnHold.birthday;
+        }else{
+            [self.lblBirthday setText:@"未设定"];
+            _pickedDate = nil;
+        }
+        UIImage* img = [UIImage imageWithData:_babyOnHold.image];
+        self.imgBaby.image = img;
+        _babyOnHold = nil;
     }
 }
 
@@ -55,6 +63,7 @@
     GKBaby* baby = [[GKBabySitter inst] baby];
     baby.name = self.lblName.text;
     baby.birthday = _pickedDate;
+    baby.image = UIImagePNGRepresentation(self.imgBaby.image);
     [[GKBabySitter inst] save];
     [self.navigationController popViewControllerAnimated:true];
 }
@@ -70,7 +79,7 @@
 }
 
 - (IBAction)confirmBirthdayPick:(id)sender {
-
+    
     _pickedDate = [self.pkrDate date];
     [self.lblBirthday setText:[GKUtil dateToStrAsDayOnly:_pickedDate]];
     
@@ -85,6 +94,37 @@
     }
     self.btnPickDateOK.hidden = false;
     self.pkrDate.hidden = false;
+}
+
+- (IBAction)pickImage:(id)sender{
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"给宝宝选照片" message:@"请选择照片来源" delegate:self cancelButtonTitle:@"不拍了" otherButtonTitles:@"拍一个", @"从图片库选", nil];
+    alert.delegate = self;
+    alert.tag = 1;
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if(alertView.tag == 1){
+        if(buttonIndex == 0){
+            return;
+        }
+        
+        UIImagePickerControllerSourceType srcType = UIImagePickerControllerSourceTypeCamera;
+        if(buttonIndex == 2){
+            srcType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        }
+        [_pkrImage setSourceType:srcType];
+        _pkrImage.delegate = self;
+        [self presentViewController:_pkrImage animated:true completion:nil];
+    }
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    
+    UIImage* newImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    self.imgBaby.image = newImage;
+    
+    [_pkrImage dismissViewControllerAnimated:true completion:nil];
 }
 
 @end

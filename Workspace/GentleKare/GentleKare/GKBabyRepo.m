@@ -93,6 +93,9 @@ static GKBabyRepo *_instance;
 -(GKBaby*) createBabyByName:(NSString*) name{
     GKBaby* baby = [NSEntityDescription insertNewObjectForEntityForName:@"GKBaby" inManagedObjectContext:_context];
     baby.name = name;
+    UIImage* image = [UIImage imageNamed:@"Baby"];
+    NSData* data = UIImagePNGRepresentation(image);
+    baby.image = data;
     NSError *error;
     [_context save:&error];
     return baby;
