@@ -34,7 +34,7 @@
 
 -(NSArray *) getActionForGroupIdx:(NSInteger) idx;
 
--(NSObject *) getGroupCompareKeyForIdx:(NSInteger) idx;
+-(NSDate *) getGroupCompareKeyForIdx:(NSInteger) idx;
 
 -(GKAction *) getLastUnfinishedAction;
 
@@ -45,5 +45,11 @@
 -(void) reloadBabyDetail;
 
 -(GKSummary*) getTodaySummary;
+
+-(GKAction*) getTempAction;
+
+-(void) deleteActionByID:(NSNumber*) acitonID;
+
+-(void) updateActionBySrc:(GKAction*) src;
 
 @end

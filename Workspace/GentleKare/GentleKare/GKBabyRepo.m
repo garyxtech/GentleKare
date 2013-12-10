@@ -98,6 +98,14 @@ static GKBabyRepo *_instance;
     return baby;
 }
 
+-(NSArray *)fetchActionsAfterTimeUntilNow:(NSDate *)time{
+    NSDate* timeMax = [NSDate date];
+    NSFetchRequest* fetchActionAfterTime = [_model fetchRequestFromTemplateWithName:@"FetchAcitonAfterTimeUntilMax" substitutionVariables:@{@"TIME": time, @"TIMEMAX":timeMax}];
+    NSError *error;
+    NSArray *result = [_context executeFetchRequest:fetchActionAfterTime error:&error];
+    return result;
+}
+
 -(NSArray *)fetchActionsAfterTime:(NSDate *)time{
     NSFetchRequest* fetchActionAfterTime = [_model fetchRequestFromTemplateWithName:@"FetchAcitonAfterTime" substitutionVariables:@{@"TIME": time}];
     NSError *error;
@@ -118,6 +126,36 @@ static GKBabyRepo *_instance;
 -(void)saveAction:(GKAction *)action{
     [_context insertObject:action];
     [self save];
+}
+
+
+-(void) deleteActionByID:(NSNumber*) actionID{
+    GKAction* action = [self getActionByID:actionID];
+    if(actionID!=nil){
+        [_context deleteObject:action];
+        [self save];
+    }
+}
+
+-(void) updateActionBySrc:(GKAction*) src{
+    GKAction* action = [self getActionByID:src.actionID];
+    if(action!=nil){
+        action.actionType = src.actionType;
+        action.startTime = src.startTime;
+        action.endTime = src.endTime;
+        [self save];
+    }
+}
+
+-(GKAction*) getActionByID:(NSNumber*) actionID{
+    NSFetchRequest* fetchActionByID = [_model fetchRequestFromTemplateWithName:@"FetchActionByActionID" substitutionVariables:@{@"ID": actionID}];
+    NSError *error;
+    NSArray *result = [_context executeFetchRequest:fetchActionByID error:&error];
+    if([result count]>0){
+        return [result firstObject];
+    }else{
+        return nil;
+    }
 }
 
 

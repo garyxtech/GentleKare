@@ -7,6 +7,7 @@
 //
 
 #import "GKHisViewController.h"
+#import "GKActionDetailViewController.h"
 
 @interface GKHisViewController ()
 
@@ -81,6 +82,11 @@
     return cell;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    NSDate* day = [[GKBabySitter inst]getGroupCompareKeyForIdx:section];
+    return [GKUtil dateToStrAsDayOnly:day];
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -120,16 +126,18 @@
 }
 */
 
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    UIViewController* vc = [segue destinationViewController];
+    if([vc class] == [GKActionDetailViewController class]){
+        GKActionDetailViewController* actionDetailVC = (GKActionDetailViewController*) vc;
+        UIButton* btnInfo = (UIButton*) sender;
+        UITableViewCell* cell = (UITableViewCell*) btnInfo.superview.superview.superview;
+        NSIndexPath* indexPath = [self.tableView indexPathForCell:cell];
+        GKAction* action = [[[GKBabySitter inst] getActionForGroupIdx:indexPath.section] objectAtIndex:indexPath.row
+                            ];
+        [actionDetailVC loadAction:action];
+    }
 }
-
- */
 
 @end

@@ -20,7 +20,7 @@ static const NSDateFormatter *DATEFORMATTER_MONTHDAYTIME;
     
     DATEFORMATTER_DAYTIME = [[NSDateFormatter alloc] init];
     [DATEFORMATTER_DAYTIME setTimeZone:[NSTimeZone localTimeZone]];
-    [DATEFORMATTER_DAYTIME setDateFormat:@"yyyy/MM/dd hh:mm"];
+    [DATEFORMATTER_DAYTIME setDateFormat:@"yyyy/MM/dd HH:mm"];
     
     DATEFORMATTER_DAY = [[NSDateFormatter alloc] init];
     [DATEFORMATTER_DAY setTimeZone:[NSTimeZone localTimeZone]];
@@ -32,12 +32,12 @@ static const NSDateFormatter *DATEFORMATTER_MONTHDAYTIME;
     
     DATEFORMATTER_MONTHDAYTIME = [[NSDateFormatter alloc] init];
     [DATEFORMATTER_MONTHDAYTIME setTimeZone:[NSTimeZone localTimeZone]];
-    [DATEFORMATTER_MONTHDAYTIME setDateFormat:@"MM/dd hh:mm"];
+    [DATEFORMATTER_MONTHDAYTIME setDateFormat:@"MM/dd HH:mm"];
 
     
     DATEFORMATTER_TIME = [[NSDateFormatter alloc] init];
     [DATEFORMATTER_TIME setTimeZone:[NSTimeZone localTimeZone]];
-    [DATEFORMATTER_TIME setDateFormat:@"hh:mm"];
+    [DATEFORMATTER_TIME setDateFormat:@"HH:mm"];
 }
 
 +(NSString*) nvl:(NSString*) src{

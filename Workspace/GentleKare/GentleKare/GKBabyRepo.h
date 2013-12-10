@@ -19,10 +19,18 @@
 
 -(NSArray*) fetchActionsAfterTime: (NSDate*) time;
 
+-(NSArray*) fetchActionsAfterTimeUntilNow: (NSDate*) time;
+
 -(GKAction*) getNewAction;
 
 -(void) save;
 
 -(void) saveAction:(GKAction*)action;
+
+-(void) deleteActionByID:(NSNumber*) actionID;
+
+-(void) updateActionBySrc:(GKAction*) src;
+
+-(GKAction*) getActionByID:(NSNumber*) actionID;
 
 @end

@@ -13,7 +13,9 @@
         <attribute name="height" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <fetchRequest name="FetchAcitonAfterTime" entity="GKAction" predicateString="endTime > $TIME"/>
+    <fetchRequest name="FetchAcitonAfterTime" entity="GKAction" predicateString="endTime >= $TIME"/>
+    <fetchRequest name="FetchAcitonAfterTimeUntilMax" entity="GKAction" predicateString="endTime >= $TIME AND endTime &lt;= $TIMEMAX"/>
+    <fetchRequest name="FetchActionByActionID" entity="GKAction" predicateString="actionID == $ID"/>
     <fetchRequest name="FetchAllActions" entity="GKAction"/>
     <fetchRequest name="FindBabyByName" entity="GKBaby" predicateString="name == $NAME"/>
     <fetchRequest name="FindFirstBaby" entity="GKBaby"/>

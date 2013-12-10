@@ -140,6 +140,17 @@ static GKBabySitter *instance;
         
         [arAction addObject:curr];
     }
+    
+    for(int i=0; i<[_arArActionByGroupIdx count];i++){
+        NSMutableArray* curr = [_arArActionByGroupIdx objectAtIndex:i];
+        NSArray* sorted = [curr sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            GKAction* a1 = (GKAction*) obj1;
+            GKAction* a2 = (GKAction*) obj2;
+            return [a2.endTime compare:a1.endTime];
+        }];
+        [curr removeAllObjects];
+        [curr addObjectsFromArray:sorted];
+    }
 }
 
 -(GKAction *) getLastUnfinishedAction{
@@ -165,6 +176,7 @@ static GKBabySitter *instance;
 
 -(void)finishAt:(NSDate *)endTime{
     _actionOnHold.endTime = endTime;
+    _actionOnHold.actionID = [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]];
     [_repo saveAction:_actionOnHold];
     _actionOnHold = nil;
     [self updateActionGroup];
@@ -219,12 +231,8 @@ static GKBabySitter *instance;
     return nil;
 }
 
--(NSObject *)getGroupCompareKeyForIdx:(NSInteger)idx{
-    return [self _getGroupCompareKeyForIdx:idx];
-}
-
--(NSObject *)_getGroupCompareKeyForIdx:(NSInteger)idx{
-    return [_arDaysSorted objectAtIndex:idx];
+-(NSDate *)getGroupCompareKeyForIdx:(NSInteger)idx{
+    return (NSDate*)[_arDaysSorted objectAtIndex:idx];
 }
 
 -(void)disposeNow{
@@ -249,10 +257,23 @@ static GKBabySitter *instance;
     GKSummary* sum = [[GKSummary alloc] init];
     NSDate* todayZero = [NSDate date];
     todayZero = [GKUtil stripTime:todayZero];
-    NSArray* actions = [[GKBabyRepo inst] fetchActionsAfterTime:todayZero];
+    NSArray* actions = [[GKBabyRepo inst] fetchActionsAfterTimeUntilNow:todayZero];
     [sum analyzeActions:actions];
     return sum;
 }
 
+-(GKAction *)getTempAction{
+    return [_repo getNewAction];
+}
+
+-(void)deleteActionByID:(NSNumber *)actionID{
+    [[GKBabyRepo inst] deleteActionByID:actionID];
+    [self updateActionGroup];
+}
+
+-(void)updateActionBySrc:(GKAction *)src{
+    [[GKBabyRepo inst] updateActionBySrc:src];
+    [self updateActionGroup];
+}
 
 @end
