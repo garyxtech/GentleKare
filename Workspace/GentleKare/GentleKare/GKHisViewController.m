@@ -75,10 +75,8 @@
     [lblAction setText:[[GKBabySitter inst] getActionDescription:[action.actionType intValue]]];
 
     [lblStartTime setText:[GKUtil dateToStr:action.startTime]];
-    NSLog(@"lbl start at %@", lblStartTime.text);
     
     [lblEndTime setText:[GKUtil dateToStr:action.endTime]];
-    NSLog(@"lbl end at %@", lblEndTime.text);
     
     return cell;
 }

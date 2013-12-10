@@ -19,4 +19,5 @@
 #import "GKUtil.h"
 #import "GKBaby.h"
 #import "GKAction.h"
+#import "GKSummary.h"
 #import "GKBabySitter.h"

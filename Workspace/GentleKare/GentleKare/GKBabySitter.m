@@ -245,5 +245,14 @@ static GKBabySitter *instance;
     [[GKBabyRepo inst] save];
 }
 
+-(GKSummary*) getTodaySummary{
+    GKSummary* sum = [[GKSummary alloc] init];
+    NSDate* todayZero = [NSDate date];
+    todayZero = [GKUtil stripTime:todayZero];
+    NSArray* actions = [[GKBabyRepo inst] fetchActionsAfterTime:todayZero];
+    [sum analyzeActions:actions];
+    return sum;
+}
+
 
 @end

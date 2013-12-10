@@ -44,4 +44,6 @@
 
 -(void) reloadBabyDetail;
 
+-(GKSummary*) getTodaySummary;
+
 @end
