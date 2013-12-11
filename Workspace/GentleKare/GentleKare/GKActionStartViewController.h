@@ -9,17 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface GKActionStartViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *lblAction;
 @property (weak, nonatomic) IBOutlet UILabel *lblStartTime;
 @property (weak, nonatomic) IBOutlet UILabel *lblElapsedTime;
 @property (weak, nonatomic) IBOutlet UIButton *btnEnd;
-@property (weak, nonatomic) IBOutlet UIButton *btnCancel;
 @property (weak, nonatomic) IBOutlet UIButton *btnDispose;
 
 - (void) loadForAction:(GK_E_Action) action;
 
 - (IBAction)endAction:(id)sender;
-- (IBAction)cancelAction:(id)sender;
 - (IBAction)triggerDispose:(id)sender;
 
 -(void)updateElapseTime;

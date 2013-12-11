@@ -40,8 +40,9 @@
     [[NSRunLoop mainRunLoop] addTimer:_timerElapsedTime forMode:NSRunLoopCommonModes];
     
     NSString* actionDesc = [[GKBabySitter inst] getActionDescription:_actionType];
-    self.lblAction.text = actionDesc;
     self.lblStartTime.text = [GKUtil dateToStr:_startTime];
+    
+    self.navigationItem.title = actionDesc;
     
 }
 
@@ -66,10 +67,6 @@
 
 - (IBAction)endAction:(id)sender {
     [[GKBabySitter inst] finishAt:[NSDate date]];
-    [[self navigationController] popViewControllerAnimated:true];
-}
-
-- (IBAction)cancelAction:(id)sender {
     [[self navigationController] popViewControllerAnimated:true];
 }
 

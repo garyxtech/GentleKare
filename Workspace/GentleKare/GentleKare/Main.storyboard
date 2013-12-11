@@ -93,7 +93,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="主页" id="xdI-6r-7L1"/>
+                    <tabBarItem key="tabBarItem" title="主页" image="home.png" id="xdI-6r-7L1"/>
                     <navigationItem key="navigationItem" title="宝宝名字" id="VWa-4u-d54"/>
                     <connections>
                         <outlet property="btnDispose" destination="C8W-zm-ElH" id="TLl-l2-3CT"/>
@@ -439,7 +439,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <scene sceneID="7tY-R6-1HQ">
             <objects>
                 <navigationController definesPresentationContext="YES" id="d2g-zw-cyg" userLabel="历史-NAV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="历史" id="W8C-dn-4IL"/>
+                    <tabBarItem key="tabBarItem" title="历史" image="history.png" id="W8C-dn-4IL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YiZ-Bm-Yjz">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -733,7 +733,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="今天" id="kSb-zq-yrY"/>
+                    <tabBarItem key="tabBarItem" title="今天" image="play.png" id="kSb-zq-yrY"/>
                     <navigationItem key="navigationItem" title="宝宝今天" id="FJs-C9-U9G"/>
                     <connections>
                         <outlet property="lblCountDispose" destination="qf1-Yh-Xt7" id="a1L-Na-8z7"/>
@@ -750,6 +750,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <point key="canvasLocation" x="606" y="489"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="history.png" width="30" height="30"/>
+        <image name="home.png" width="30" height="30"/>
+        <image name="play.png" width="40" height="40"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
