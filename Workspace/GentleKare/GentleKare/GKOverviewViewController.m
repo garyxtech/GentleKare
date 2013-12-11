@@ -32,7 +32,7 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    [self.babyName setTitle:[[GKBabySitter inst] baby].name forState:UIControlStateNormal];
+    self.navigationItem.title = [[GKBabySitter inst] baby].name;
     UIImage* image = [UIImage imageWithData:[[GKBabySitter inst] baby].image];
     self.imgBaby.image = image;
 }

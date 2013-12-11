@@ -15,8 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIDatePicker *pkrTime;
 @property (weak, nonatomic) IBOutlet UIButton *btnSave;
 @property (weak, nonatomic) IBOutlet UIButton *btnDelete;
-@property (weak, nonatomic) IBOutlet UIButton *btnStartTimeOK;
-@property (weak, nonatomic) IBOutlet UIButton *btnEndTimeOK;
+@property (weak, nonatomic) IBOutlet UIButton *btnPickOK;
 
 - (IBAction)startPickDate:(id)sender;
 - (IBAction)pickerOK:(id)sender;

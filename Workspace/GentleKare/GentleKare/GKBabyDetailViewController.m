@@ -68,11 +68,6 @@
     [self.navigationController popViewControllerAnimated:true];
 }
 
-- (IBAction)cancelDetail:(id)sender {
-    [[GKBabySitter inst] reloadBabyDetail];
-    [self.navigationController popViewControllerAnimated:true];
-}
-
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     return true;

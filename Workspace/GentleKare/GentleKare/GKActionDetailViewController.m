@@ -61,27 +61,25 @@
     NSDate* date = nil;
     if(sender == self.txtStartTime){
         date = _action.startTime;
-        self.btnStartTimeOK.hidden = false;
+        self.btnPickOK.hidden = false;
     }else if(sender == self.txtEndTime){
         date = _action.endTime;
-        self.btnEndTimeOK.hidden = false;
+        self.btnPickOK.hidden = false;
     }
     self.pkrTime.date = date;
 }
 
 - (IBAction)pickerOK:(id)sender {
-    UIButton* btnOK = (UIButton*) sender;
     NSDate* date = self.pkrTime.date;
-    if(btnOK.tag == 0){
+    if([self.txtStartTime isFirstResponder]){
         _action.startTime = date;
         [self.txtStartTime resignFirstResponder];
-        self.btnStartTimeOK.hidden = true;
-    }else if(btnOK.tag == 1){
+    }else if([self.txtEndTime isFirstResponder]){
         _action.endTime = date;
         [self.txtEndTime resignFirstResponder];
-        self.btnEndTimeOK.hidden = true;
     }
     self.pkrTime.hidden = true;
+    self.btnPickOK.hidden = true;
     [self updateInfo];
 }
 

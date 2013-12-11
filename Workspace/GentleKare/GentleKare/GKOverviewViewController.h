@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface GKOverviewViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIButton *babyName;
 @property (weak, nonatomic) IBOutlet UIImageView *imgBaby;
 @property (weak, nonatomic) IBOutlet UIButton *btnFeed;
 @property (weak, nonatomic) IBOutlet UIButton *btnPlay;

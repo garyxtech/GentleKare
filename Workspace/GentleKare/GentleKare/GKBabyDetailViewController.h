@@ -15,7 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnPickDateOK;
 @property (weak, nonatomic) IBOutlet UIDatePicker *pkrDate;
 - (IBAction)confirmDetail:(id)sender;
-- (IBAction)cancelDetail:(id)sender;
 - (IBAction)confirmBirthdayPick:(id)sender;
 - (IBAction)startPickBirthday:(id)sender;
 - (IBAction)pickImage:(id)sender;
