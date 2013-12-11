@@ -30,6 +30,7 @@
     [super viewDidLoad];
     [self.lblBirthday setInputView:self.pkrDate];
     _pkrImage = [[UIImagePickerController alloc] init];
+    [_pkrImage setAllowsEditing:true];
 }
 
 -(void)loadBabyDetail:(GKBaby*) baby{
@@ -116,7 +117,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     
-    UIImage* newImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    UIImage* newImage = [info objectForKey:UIImagePickerControllerEditedImage];
     newImage = [GKUtil imageWithImage:newImage scaledToSize:CGSizeMake(100, 100)];
     self.imgBaby.image = newImage;
     
