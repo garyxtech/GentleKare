@@ -117,6 +117,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     
     UIImage* newImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    newImage = [GKUtil imageWithImage:newImage scaledToSize:CGSizeMake(100, 100)];
     self.imgBaby.image = newImage;
     
     [_pkrImage dismissViewControllerAnimated:true completion:nil];

@@ -35,4 +35,6 @@
 
 +(NSDateComponents*) getDateCompForDate:(NSDate*) toDate compareTo:(NSDate*) fromDate;
 
++ (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
+
 @end
