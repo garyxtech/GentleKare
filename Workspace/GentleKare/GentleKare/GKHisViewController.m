@@ -13,7 +13,9 @@
 
 @end
 
-@implementation GKHisViewController
+@implementation GKHisViewController{
+    NSDate* _lastActionLoadTime;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,7 +38,15 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
+    
+    NSDate* lastActionChangedTime = [[GKBabySitter inst] getLastActionChangedTime];
+    
+    if(_lastActionLoadTime != nil && lastActionChangedTime != nil && [_lastActionLoadTime timeIntervalSinceDate:lastActionChangedTime] > 0){
+        return;
+    }
+    
     [self.tableView reloadData];
+    _lastActionLoadTime = [NSDate date];
 }
 
 - (void)didReceiveMemoryWarning

@@ -14,7 +14,9 @@
 
 @end
 
-@implementation GKOverviewViewController
+@implementation GKOverviewViewController{
+    NSDate* _lastLoadTime;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,9 +34,16 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
+    
+    NSDate* lastChangedTime = [[GKBabySitter inst] getLastBabyDetailChangedTime];
+    if(_lastLoadTime != nil && lastChangedTime != nil && [_lastLoadTime timeIntervalSinceDate:lastChangedTime] > 0){
+        return;
+    }
+    
     self.navigationItem.title = [[GKBabySitter inst] baby].name;
     UIImage* image = [UIImage imageWithData:[[GKBabySitter inst] baby].image];
     self.imgBaby.image = image;
+    _lastLoadTime = [NSDate date];
 }
 
 - (void)didReceiveMemoryWarning

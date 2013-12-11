@@ -19,6 +19,8 @@
     NSArray* _arDaysSorted;
     GK_E_PERIOD _periodType;
     GKAction* _actionOnHold;
+    NSDate* _lastBabyDetailChangedTime;
+    NSDate* _lastActionChangedTime;
 }
 
 static GKBabySitter *instance;
@@ -43,30 +45,20 @@ static GKBabySitter *instance;
     _periodType = GK_E_PERIOD_LAST31DAYS;
     [self reloadBabyDetail];
     _recentActions = [[NSMutableArray alloc] init];
-    [self updateCurrAction];    
     [self updateActionGroup];
 }
 
 -(void) reloadBabyDetail{
     _baby = [_repo findOrCreateBaby];
+    _lastBabyDetailChangedTime = [NSDate date];
 }
 
--(void) updateCurrAction{
-    
-    GK_E_Action foundActionType = GK_E_Action_IDLE;
-    
-    for(GKAction* currAction in [_recentActions reverseObjectEnumerator]){
-        if([currAction.actionType intValue] == GK_E_Action_DISPOSE){
-            continue;
-        }
-        if(currAction.endTime){
-            continue;
-        }
-        foundActionType = (GK_E_Action) [currAction.actionType intValue];
-        break;
-    }
-    
-    _baby.currAction = [NSNumber numberWithInt:foundActionType];
+-(NSDate*) getLastBabyDetailChangedTime{
+    return _lastBabyDetailChangedTime;
+}
+
+-(NSDate *) getLastActionChangedTime{
+    return _lastActionChangedTime;
 }
 
 -(NSDate*) getDateSinceSetPeriod{
@@ -95,6 +87,8 @@ static GKBabySitter *instance;
     NSArray* foundActions = [_repo fetchActionsAfterTime:boundDate];
     [_recentActions removeAllObjects];
     [_recentActions addObjectsFromArray:foundActions];
+    
+    _lastActionChangedTime = [NSDate date];
     
     _arArActionByGroupIdx = [[NSMutableArray alloc] init];
     _arDaysSorted = nil;
@@ -168,7 +162,6 @@ static GKBabySitter *instance;
 }
 
 -(void)action:(GK_E_Action)action at:(NSDate *)startTime{
-    [self baby].currAction = [NSNumber numberWithInt:action];
     _actionOnHold = [_repo getNewAction];
     _actionOnHold.actionType = [NSNumber numberWithInt:action];
     _actionOnHold.startTime = startTime;
@@ -179,16 +172,8 @@ static GKBabySitter *instance;
     _actionOnHold.actionID = [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]];
     [_repo saveAction:_actionOnHold];
     _actionOnHold = nil;
+    _lastActionChangedTime = [NSDate date];
     [self updateActionGroup];
-}
-
--(GK_E_Action)getCurrBabyAction{
-    return [_baby.currAction intValue];
-}
-
--(NSString *)getCurrBabyActionDescription{
-    GK_E_Action action = [_baby.currAction intValue];
-    return [self getActionDescription:action];
 }
 
 -(NSString *)getActionDescription:(GK_E_Action)action{
@@ -206,10 +191,6 @@ static GKBabySitter *instance;
         default:
             return @"";
     }
-}
-
--(bool)isLastActionInProgress{
-    return [self getCurrBabyAction] != GK_E_Action_IDLE;
 }
 
 -(int)getGroupCount{
@@ -242,14 +223,12 @@ static GKBabySitter *instance;
     disposeAction.startTime = now;
     disposeAction.endTime = now;
     [_repo saveAction:disposeAction];
+    _lastActionChangedTime = now;
     [self updateActionGroup];
 }
 
--(void)cancelLastAction{
-    
-}
-
 -(void) save{
+    _lastBabyDetailChangedTime = [NSDate date];
     [[GKBabyRepo inst] save];
 }
 
@@ -268,11 +247,13 @@ static GKBabySitter *instance;
 
 -(void)deleteActionByID:(NSNumber *)actionID{
     [[GKBabyRepo inst] deleteActionByID:actionID];
+    _lastActionChangedTime = [NSDate date];
     [self updateActionGroup];
 }
 
 -(void)updateActionBySrc:(GKAction *)src{
     [[GKBabyRepo inst] updateActionBySrc:src];
+    _lastActionChangedTime = [NSDate date];
     [self updateActionGroup];
 }
 

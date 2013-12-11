@@ -2,7 +2,7 @@
 //  GKBaby.m
 //  GentleKare
 //
-//  Created by 薛洪 on 13-12-10.
+//  Created by 薛洪 on 13-12-11.
 //  Copyright (c) 2013年 薛洪. All rights reserved.
 //
 
@@ -12,10 +12,9 @@
 @implementation GKBaby
 
 @dynamic birthday;
-@dynamic currAction;
 @dynamic gender;
 @dynamic height;
-@dynamic name;
 @dynamic image;
+@dynamic name;
 
 @end

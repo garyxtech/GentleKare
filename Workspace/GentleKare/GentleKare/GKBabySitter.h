@@ -16,19 +16,15 @@
 
 -(GKBaby*) baby;
 
--(GK_E_Action) getCurrBabyAction;
+-(NSDate*) getLastBabyDetailChangedTime;
 
--(NSString*) getCurrBabyActionDescription;
+-(NSDate*) getLastActionChangedTime;
 
 -(NSString*) getActionDescription:(GK_E_Action)action;
 
 -(void) action:(GK_E_Action) action at:(NSDate*) startTime;
 
 -(void) finishAt:(NSDate*) endTime;
-
--(void) cancelLastAction;
-
--(bool) isLastActionInProgress;
 
 -(int) getGroupCount;
 

@@ -70,7 +70,6 @@
 }
 
 - (IBAction)cancelAction:(id)sender {
-    [[GKBabySitter inst] cancelLastAction];
     [[self navigationController] popViewControllerAnimated:true];
 }
 

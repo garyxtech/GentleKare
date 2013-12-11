@@ -12,7 +12,9 @@
 
 @end
 
-@implementation GKTodayViewController
+@implementation GKTodayViewController{
+    NSDate* _lastActionLoadTime;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +32,12 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
+    
+    NSDate* lastActionChangedTime = [[GKBabySitter inst] getLastActionChangedTime];
+    
+    if(_lastActionLoadTime != nil && lastActionChangedTime != nil && [_lastActionLoadTime timeIntervalSinceDate:lastActionChangedTime] > 0){
+        return;
+    }
     
     GKSummary* sum = [[GKBabySitter inst] getTodaySummary];
     
